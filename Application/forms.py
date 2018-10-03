@@ -23,8 +23,8 @@ class RegistrationForm(FlaskForm):
 
 
 class LoginForm(FlaskForm): #do we want to change to login by username?
-	email = StringField("Email", validators=[DataRequired(), Email()])
-	password = PasswordField("Password", validators=[DataRequired()])
-	remember = BooleanField("Remember Me")
+	email = StringField('Email', validators=[DataRequired(), Email()])
+	password = PasswordField('Password', validators=[DataRequired()])
+	remember = BooleanField('Remember Me')
 	submit = SubmitField('Login')
 		
