@@ -45,6 +45,7 @@ def login():
 
 
 @application.route('/start_game')
+def start():
 	if current_user.is_authenticated:
 		#can start from where they left off
 	return render_template('newGame.html', title='Gone to Texas')
