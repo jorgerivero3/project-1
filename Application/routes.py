@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect, request, abort
+from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
 from Application.forms import RegistrationForm, LoginForm
 from Application.models import User
@@ -26,7 +26,7 @@ def register():
 	return render_template('register.html', title='Register', form=form)
 
 
-@application.route('.login', methods)
+@application.route('/login', methods=['GET', 'POST'])
 	if current_user.is_authenticated:
 		return redirect(url_for('start_game'))
 	form = LoginForm()
@@ -45,3 +45,9 @@ def register():
 	if current_user.is_authenticated:
 		#can start from where they left off
 	return render_template('newGame.html', title='Gone to Texas')
+
+
+@application.route('/logout')
+def logout():
+	logout_user()
+	return redirect(url_for('home'))
