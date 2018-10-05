@@ -6,6 +6,7 @@ class User(db.Model, UserMixin): #possibly link to character?
 	username = db.Column(db.String(20), unique=True, nullable=False)
 	email = db.Column(db.String(120), unique=True, nullable=False)
 	password = db.Column(db.String(60), nullable=False)
+	characters = db.relationship('Character', backref='', eager=True)
 
 	'''
 	def get_reset_token(self, expires_sec=1800):
@@ -24,3 +25,10 @@ class User(db.Model, UserMixin): #possibly link to character?
 	def __repr__(self):
 		return f"User('{self.username}', '{self.email}', '{self.image_file}')"
 	'''
+
+class Character(db.model):
+	characterName = db.Column(db.String(15), nullable=False)
+	health = db.Column(db.Integer, nullable=False, default=100)
+	alive = db.Column(db.Boolean, nullable=False, default=True)
+	progress = db.Column(db.Integer, nullable=False, default=0)
+		
