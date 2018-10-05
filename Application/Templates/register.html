@@ -6,7 +6,6 @@
         <form method="POST" action="/register">
             {{ form.hidden_tag() }}
                 <div class="form-group">
-
                     {% if form.username.errors %}
                         {{ form.username(class="form-control form-control-lg is-invalid", placeholder='Username') }}
                         <div class="invalid-feedback">

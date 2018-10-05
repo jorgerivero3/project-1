@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-	<!--  Meta  -->
-	<meta charset="UTF-8" />
-	<title>The UT Trail</title>
-	<meta name="description" content="Survive the Week." />
-	<!--  Styles  -->
-	<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/rawline" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
-	<!---<link rel="icon" href="https://i.imgur.com/AQm5OFP.png" />--->
-	<!-- Title -->
-	{% if title %}
-		<title>{{ title }}</title>
-	{% else %}
+	<head>
+		<!--  Meta  -->
+		<meta charset="UTF-8" />
 		<title>The UT Trail</title>
-	{% endif %}
-</head>
-<body>
-	<div class="navBar">
-		<ul>
-			
-		  {%if current_user.is_authenticated %}
-		  <li class="titleNav"><a href="/">The UT Trail</a></li>
-		  <li><a href="/account">Account</a></li>
-		  <li><a href="/logout">Logout</a></li>
-		  {% else %}
-		  <li class="titleNav"><a href="/">The UT Trail</a></li>
-		  <li><a href="/login">Login</a></li>
-		  <li><a href="/register">Register</a></li>
-		  {% endif %}
-
-
-		</ul>
-	</div>
-	
-	{% with messages = get_flashed_messages(with_categories=true) %}
-		{% if messages %}
-			{% for catergory, message in messages %}
-				<div class = "alert alert-{{ category }}">
-					<p>{{ message }}</p>
-			{% endfor %}
+		<meta name="description" content="Survive the Week." />
+		<!--  Styles  -->
+		<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+		<!---<link rel="icon" href="https://i.imgur.com/AQm5OFP.png" />--->
+		<!-- Title -->
+		{% if title %}
+			<title>{{ title }}</title>
+		{% else %}
+			<title>The UT Trail</title>
 		{% endif %}
-	{% endwith %}
-	{% block content %}{% endblock %}
 
-</body>
+	</head>
+
+	<body>
+		<div class="navBar">
+			<ul>
+			  <a href="/">The UT Trail</a>
+			  	{%if current_user.is_authenticated %}
+			  		<a href="/account">Account</a>
+			  		<a href="/logout">Logout</a>
+			  	{% else %}
+			  		<a href="/login">Login</a>
+			  		<a href="/register">Register</a>
+			  	{% endif %}
+			</ul>
+		</div>
+		
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for catergory, message in messages %}
+					<div class = "alert alert-{{ category }}">
+						<p>{{ message }}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		{% block content %}{% endblock %}
+	</body>
 </html>

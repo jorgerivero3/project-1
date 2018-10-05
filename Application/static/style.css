@@ -1,3 +1,14 @@
+@font-face {
+    font-family: Dude;
+    src: url(Dude_HankSr.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Fairview;
+    src: url(Fairview_SmallCaps.otf);
+}
+
 .theGrid {
   display: grid;
   height: 100vh;
@@ -7,43 +18,46 @@
     /* grid-template-rows: 200px auto 100px; */
   grid-template-rows: auto 600px auto;
 }
-  /* html {
-    height: 100vh;
-    width: 100vw;
-  } */
+
 body {
   height: 100vh;
   width: 100vw;
-  background: #f5f5f5;
+  background: url(sad.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   overflow-x: hidden;
 }
+
 h1 {
-  font-family: 'RawlineRegular';
-  font-size: 45px;
-  color: #001a4d;
-  margin: 45% 0 0;
+  font-family: 'Dude';
+  text-align: center;
+  font-size: 75px;
+  color: #bf5700;
+  margin: 10% 0 0;
 }
 h2 {
-  font-family: 'RawlineRegular';
+  font-family: 'Dude';
   font-size: 20px;
-  color: #33334d;
+  color: #bf5700;
   font-weight: lighter;
 }
 h3 {
-  font-family: 'RawlineRegular';
+  font-family: 'Dude';
   font-size: 35px;
-  color: darkslategray;
+  color: #bf5700;
   margin: 10% 0 0 10%;
 }
 h4 {
-  font-family: 'RawlineRegular';
+  font-family: 'Dude';
   font-size: 14px;
-  color: darkslategray;
+  color: #bf5700;
   margin: 0 0 0 45px;
     /* text-align: center; */
 }
 button {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Fairview';
   font-size: 20px;
   color: white;
         /* font-weight: lighter; */
@@ -91,7 +105,7 @@ li {
   display: inline-block;
   padding: 0;
   margin: 0 30px 0 0;
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Dude';
   font-size: 18px;
   color: darkslategrey;
 }
@@ -99,7 +113,7 @@ li:hover {
   color: black;
 }
 .titleNav {
-  font-family: 'RawlineRegular';
+  font-family: 'Dude';
   font-size: 25px;
   font-weight: bold;
   color: black;
@@ -112,6 +126,68 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+
+/*-------------------------------*/
+/*---     New Listing Form     --*/
+/*-------------------------------*/
+.newListing{
+  width: 450px;
+  padding: 25px;
+  margin-left: 75px;
+}
+.newListing h4{
+  font-family: 'Dude';
+  font-size: 14px;
+  color: darkslategray;
+  margin: 0 0 0 45px;
+  /*text-align: center; */
+}
+.newListing input, .newListing textarea{
+  border-radius: 10px;
+  border: 1px solid darkGray;
+  transition: 0.9s ease;
+  height: 25px;
+  width: 430px;
+  background-color: white;
+  padding: 10px 25px;
+  font-family: 'GlacialIndifferenceRegular';
+  font-size: 15px;
+}
+.newListing textarea{
+  height: 200px;
+  }
+.newListing>.listPrice{
+  width: 25px;
+}
+.newListing input[type="submit"]{
+  border:0.1em solid #FFFFFF;
+  border-radius: 5px;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.05em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background: rgba(0,0,0,0.7);
+  text-align:center;
+  transition: all 0.2s;
+  width: 240px;
+     /* margin-left: 35%; */
+     /* margin-right: 35%; */
+  margin-top: 25px;
+  margin-bottom: 5px;
+  height: 50px;
+  -webkit-transition: all 1s ease;
+  white-space: nowrap;
+}
+.newListing input[type="submit"]:hover{
+  background: rgba(0,0,0,0.9);
+  border-radius: 5px;
+}
+/*-------------------------------*/
+/*---                          --*/
+/*-------------------------------*/
 
 .ProfPic{
   height:50px; 
@@ -126,10 +202,7 @@ ul {
   align-items:center;
   justify-content:center;
 }
-.listpic{
-  overflow: hidden;
-  max-width: 250px;
-}
+
 
 .left-body {
   grid-row: 2;
@@ -155,20 +228,22 @@ img {
 .button{
   border:0.1em solid #FFFFFF;
   border-radius: 5px;
-  margin:0 0.3em 0 0;
+  margin:0 50em 0 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration:none;
   font-weight:300;
+  font-family: 'Fairview';
   color:#FFFFFF;
-  background: rgba(0,0,0,0.7);
+  font-size: 15px;
+  background: #bf5700;
   text-align:center;
   transition: all 0.2s;
   width: 240px;
      /* margin-left: 35%; */
      /* margin-right: 35%; */
   /* margin-top: 25px; */
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   height: 50px;
   -webkit-transition: all 1s ease;
   white-space: nowrap;
@@ -188,8 +263,36 @@ a {
   color: darkslategrey;
 }
 .navBar {
-  /* background: rgba(0,0,0,0.7); */
+  border: 1px solid darkGray;
+  transition: 0.9s ease;
+  overflow: hidden;
+  background-color: white;
+  padding: 10px 25px;
+  font-family: 'Dude';
+  font-size: 15px;;
 }
+
+.navBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #4CAF50;
+    color: blue;
+}
+
 input {
   border: none;
   border-bottom: 2px solid darkGray;
@@ -197,6 +300,7 @@ input {
   width: 260px;
   background-color: transparent;
   padding: 20px 0 20px 0;
+  font-size: 15px;
   font-family: 'GlacialIndifferenceRegular';
 }
 input:focus {
