@@ -7,14 +7,14 @@
             {{ form.hidden_tag() }}
                 <div class="form-group">
                     {% if form.username.errors %}
-                        {{ form.username(class="form-control form-control-lg is-invalid", placeholder='Username') }}
+                        {{ form.username(class="form-control form-control-lg is-invalid", placeholder='Character Name') }}
                         <div class="invalid-feedback">
                             {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                        {{ form.username(class="form-control form-control-lg", placeholder='Username') }}
+                        {{ form.username(class="form-control form-control-lg", placeholder='Character Name') }}
                     {% endif %}
                 </div>
                 <div class="form-group">
