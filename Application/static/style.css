@@ -5,8 +5,13 @@
 }
 
 @font-face {
-    font-family: Fairview;
-    src: url(Fairview_SmallCaps.otf);
+    font-family: Hardware;
+    src: url(DDCHardware-Regular.otf);
+}
+
+@font-face {
+    font-family: airplane;
+    src: url(Airplane.ttf);
 }
 
 .theGrid {
@@ -47,52 +52,58 @@ h3 {
   font-family: 'Dude';
   font-size: 35px;
   color: #bf5700;
-  margin: 10% 0 0 10%;
+  margin: 10% 0 0 0;
 }
 h4 {
   font-family: 'Dude';
   font-size: 14px;
   color: #bf5700;
-  margin: 0 0 0 45px;
+  margin: 0 0 0 0;
     /* text-align: center; */
 }
 button {
-  font-family: 'Fairview';
+  font-family: 'Hardware';
   font-size: 20px;
   color: white;
         /* font-weight: lighter; */
 }   
 p {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
   font-size: 20px;
   color: darkslateblue;
   margin: 0 0 0 27.5px;
 }
 h6 {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
   font-size: 15px;
-  color: darkslateblue;
-  margin: 25px 0 0 10%;
+  color: white;
+  padding: 0 200px;
+}
+h5 {
+  font-family: 'Dude';
+  font-size: 75px;
+  color: #bf5700;
+  margin: 25px 0 0 0;
 }
 small {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'airplane';
   font-size: 15px;
-  color: darkslateblue;
+  color: white;
   margin: 25px 0 0 20px;
 }
-a {
-  font-family: 'GlacialIndifferenceRegular';
+/*a {
+  font-family: 'airplane';
   font-size: 15px;
   color: darkslategrey;
-}
+}*/
 
 alert {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
   font-size: 15px;
   color: darkslateblue;
 }
 span {
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Dude';
   font-size: 15px;
   color: darkslateblue;
   margin: 25px 0 0 15px;
@@ -151,7 +162,7 @@ ul {
   width: 430px;
   background-color: white;
   padding: 10px 25px;
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
   font-size: 15px;
 }
 .newListing textarea{
@@ -228,12 +239,11 @@ img {
 .button{
   border:0.1em solid #FFFFFF;
   border-radius: 5px;
-  margin:0 50em 0 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration:none;
   font-weight:300;
-  font-family: 'Fairview';
+  font-family: 'Hardware';
   color:#FFFFFF;
   font-size: 15px;
   background: #bf5700;
@@ -255,10 +265,10 @@ button:hover{
 }
 a {
   text-decoration: none;
+  color: grey;
 }
 .theForm {
-  margin: 3% 0 0 10%;
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
   font-size: 15px;
   color: darkslategrey;
 }
@@ -266,7 +276,7 @@ a {
   border: 1px solid darkGray;
   transition: 0.9s ease;
   overflow: hidden;
-  background-color: white;
+  background-color: #bf5700;
   padding: 10px 25px;
   font-family: 'Dude';
   font-size: 15px;;
@@ -301,7 +311,7 @@ input {
   background-color: transparent;
   padding: 20px 0 20px 0;
   font-size: 15px;
-  font-family: 'GlacialIndifferenceRegular';
+  font-family: 'Hardware';
 }
 input:focus {
   outline: none;

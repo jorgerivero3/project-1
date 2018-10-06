@@ -25,8 +25,10 @@
 			  <a href="/">The UT Trail</a>
 			  	{%if current_user.is_authenticated %}
 			  		<a href="/account">Account</a>
+			  		<a href="/about">About the Game</a>
 			  		<a href="/logout">Logout</a>
 			  	{% else %}
+			  		<a href="/about">About the Game</a>
 			  		<a href="/login">Login</a>
 			  		<a href="/register">Register</a>
 			  	{% endif %}

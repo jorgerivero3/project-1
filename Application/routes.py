@@ -43,13 +43,16 @@ def login():
 			flash('Login unsuccessful. Email and/or password incorrect.')
 	return render_template('login.html', title='Login', form=form)
 
+@application.route('/about')
+def about():
+	return render_template('/about.html', title='About The UT Trail')
 
 @application.route('/start_game')
 def start():
 	if current_user.is_authenticated:
 		#can start from where they left off
 		return
-	return render_template('newGame.html', title='Gone to Texas')
+	return render_template('UTtrailGame.html', title='Gone to Texas')
 
 @application.route('/logout')
 def logout():
