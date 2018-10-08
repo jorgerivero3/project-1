@@ -1,3 +1,5 @@
+import unittest
+
 # Characters 
 class Player(object):
 
@@ -76,3 +78,21 @@ def game_over(player):
 
 main()
 
+
+class TestCharacter(unittest.TestCase):
+	# test that character class functions properly
+	case = Player(Steve)
+	def test_alive:
+		self.assertFalse(case.death)
+
+	def test_damage:
+		case.hurt(50)
+		self.assertEqual(case.health, 50)
+
+	def test_death
+		case.hurt(50)
+		self.assertTrue(case.death)
+
+if __name__ == '__main__':
+	unittest.main()
+		
