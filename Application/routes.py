@@ -97,6 +97,8 @@ def reset_token(token):
 @application.route('/game', methods=['GET', 'POST'])
 @login_required
 def game():
+	if current_user.progress == 1:
+		return redirect(url_for('gameover'))
 	form = GameInput()
 	if form.validate_on_submit():
 		if form.ans.data == 1:
@@ -107,8 +109,6 @@ def game():
 			current_user.grades = current_user.grades - 5
 		current_user.progress = current_user.progress + 1
 		db.session.commit()
-		if current_user.progress == 1:
-			return redirect(url_for('gameover'))
 		return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
 
