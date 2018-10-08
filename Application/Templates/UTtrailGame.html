@@ -9,7 +9,17 @@
 		You are getting ready for the day. You should really go to class:<br>
 		1. Go to class<br>
 		2. skip class<br>
+	{% else %}
+		<!-- picture -->
+		This is not supposed to show up
 	{% endif %}
+	<div class="theForm">
+		<form method="POST" action="/game">
+			{{ form.hidden_tag() }}
+				<div class="form-group"></div>
+					{{ form.ans }}
+		</form>
+	</div>
 </div>
 </body>
 {% endblock %}

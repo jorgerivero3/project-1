@@ -7,7 +7,7 @@ from Application.models import User
 class RegistrationForm(FlaskForm):
 	username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
 	email = StringField('Email', validators=[DataRequired(), Email()])
-	password = PasswordField('Password', validators=[DataRequired])
+	password = PasswordField('Password', validators=[DataRequired()])
 	confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
 	submit = SubmitField('Register')
 
@@ -41,3 +41,7 @@ class ResetPasswordForm(FlaskForm):
 	password = PasswordField("New Password", validators=[DataRequired()])
 	confirm_password = PasswordField("Confirm Password", validators=[DataRequired(), EqualTo('password')])
 	submit = SubmitField('Reset Password')
+
+
+class GameInput(FlaskForm):
+	ans = StringField('Your Choice: ', validators=[DataRequired()])

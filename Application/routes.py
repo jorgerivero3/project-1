@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
-from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm
+from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, GameInput
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
@@ -87,28 +87,30 @@ def reset_token(token):
 
 
 ### GAME CODE ###
-@application.route('/game')
-@login_required
-def game():
-	return render_template('UTtrailGame.html', title='Gone to Texas', progress=current_user.progress)
+#@application.route('/game')
+#@login_required
+#def game():
+#	return render_template('UTtrailGame.html', title='Gone to Texas', progress=current_user.progress, form=form)
 
 
 @application.route('/game/<progress>', methods=['GET', 'POST'])
+@application.route('/game', methods=['GET', 'POST'])
 @login_required
-def gameplay(progress):
+def game():
 	form = GameInput()
 	if form.validate_on_submit():
-		if form.input.data == 1:
+		if form.ans.data == 1:
 			current_user.health = current_user.health - 5
-		elif form.input.data == 2:
+		elif form.ans.data == 2:
 			current_user.sanity = current_user.sanity - 5
-		elif form.input.data == 3:
+		elif form.ans.data == 3:
 			current_user.grades = current_user.grades - 5
 		current_user.progress = current_user.progress + 1
+		db.session.commit()
 		if current_user.progress == 1:
-			return redirect(url_for(gameover))
-		return redirect(url_for(gameplay))
-	return render_template('game.html', title='hookem', progress=current_user.progress)
+			return redirect(url_for('gameover'))
+		return redirect(url_for('game'))
+	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
 
 
 @application.route('/gameover')
