@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
 from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm
-from Application.models import User, Character
+from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 
@@ -114,4 +114,4 @@ def gameplay(progress):
 @application.route('/gameover')
 @login_required
 def gameover():
-	return render_template('game.html', health=current_user.health, sanity=current_user.sanity, grades=current_user.grades)
+	return render_template('gameover.html', health=current_user.health, sanity=current_user.sanity, grades=current_user.grades)
