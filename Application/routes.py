@@ -97,7 +97,7 @@ def reset_token(token):
 @application.route('/game/<progress>', methods=['GET', 'POST'])
 def game(progress):
 	if current_user.is_authenticated:
-		if current_user.character.first()
+		if current_user.character.first():
 			if current_user.progress == progress:
 				return render_template('game.html', title='hookem', progress=progress)
 		else:
