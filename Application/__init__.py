@@ -7,8 +7,9 @@ from flask_mail import Mail
 
 application = Flask(__name__)
 application.config['SECRET_KEY'] = 'c435bd07880364149cdf9661f1994db4'
+application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 ''' idk what this stuff does either
-application.config['SQLALCHEMY_DATABASE_URI'] = [something here]
+
 application.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 application.secret_key = "zvXzBQR8oBB5kgKpQH1xC5Sf0hSEz8l/CwQKA9VM"
 '''

@@ -105,7 +105,7 @@ def gameplay(progress):
 		elif form.input.data == 3:
 			current_user.grades = current_user.grades - 5
 		current_user.progress = current_user.progress + 1
-		if current_user.progress > 9:
+		if current_user.progress == 1:
 			return redirect(url_for(gameover))
 		return redirect(url_for(gameplay))
 	return render_template('game.html', title='hookem', progress=current_user.progress)
