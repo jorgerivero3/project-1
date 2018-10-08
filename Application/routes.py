@@ -97,20 +97,5 @@ def reset_token(token):
 @application.route('/game/<progress>', methods=['GET', 'POST'])
 def game(progress):
 	if current_user.is_authenticated:
-		if current_user.character.first():
-			if current_user.progress == progress:
-				return render_template('game.html', title='hookem', progress=progress)
-		else:
-			return redirect(url_for('newChar'))
+		return render_template('game.html', title='hookem', progress=current_user.progress)
 	return render_template('game.html', title='hookem')
-
-
-@application.route('/game/newChar', methods=['GET', 'POST'])
-def newChar():
-	if form.validate_on_submit():
-		if current_user.is_authenticated:
-			character = Character(characterName=form.characterName.data, user=current_user.id)
-			db.session.add(character)
-			db.session.commit()
-		return redirect(url_for(game))
-	return render_template('newChar.html', title='Make your longhorn')
