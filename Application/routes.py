@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
 from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm
-from Application.models import User
+from Application.models import User, Character
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 
@@ -43,21 +43,24 @@ def login():
 			flash('Login unsuccessful. Email and/or password incorrect.')
 	return render_template('login.html', title='Login', form=form)
 
+
 @application.route('/about')
 def about():
 	return render_template('/about.html', title='About The UT Trail')
 
+
 @application.route('/start_game')
 def start():
 	if current_user.is_authenticated:
-		#can start from where they left off
-		return
+		return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='Gone to Texas')
+
 
 @application.route('/logout')
 def logout():
 	logout_user()
 	return redirect(url_for('home'))
+
 
 @application.route("/password_retrieval", methods=['GET', 'POST'])
 def password_retrieval():
@@ -88,3 +91,26 @@ def reset_token(token):
 		flash('Password has been updated.', 'success')
 		return redirect(url_for('login'))
 	return render_template('reset_token.html', title='Reset Password', form=form)
+
+
+### GAME CODE ###
+@application.route('/game/<progress>', methods=['GET', 'POST'])
+def game(progress):
+	if current_user.is_authenticated:
+		if current_user.character.first()
+			if current_user.progress == progress:
+				return render_template('game.html', title='hookem', progress=progress)
+		else:
+			return redirect(url_for('newChar'))
+	return render_template('game.html', title='hookem')
+
+
+@application.route('/game/newChar', methods=['GET', 'POST'])
+def newChar():
+	if form.validate_on_submit():
+		if current_user.is_authenticated:
+			character = Character(characterName=form.characterName.data, user=current_user.id)
+			db.session.add(character)
+			db.session.commit()
+		return redirect(url_for(game))
+	return render_template('newChar.html', title='Make your longhorn')
