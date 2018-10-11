@@ -125,6 +125,34 @@ def game():
 def get_level(progress):
 	return master[progress]
 
+def doEffect(array):
+	for string in array:
+		if string == '':
+			return
+		else:
+			if string[-1] == 'h':
+				if string[0] == '+':
+					current_user.health = current_user.health + int(string[1:-2])
+				else:
+					current_user.health = current_user.health - int(string[1:-2])
+			elif string[-1] == 's':
+				if string[0] == '+':
+					current_user.sanity = current_user.sanity + int(string[1:-2])
+				else:
+					current_user.sanity = current_user.sanity - int(string[1:-2])
+			else:
+				if string[0] == '+':
+					current_user.grades = current_user.grades + int(string[1:-2])
+				else:
+					current_user.grades = current_user.grades - int(string[1:-2])
+			if current_user.health > 100:
+				current_user.health = 100
+			if current_user.sanity > 100:
+				current_user.sanity = 100
+			if current_user.grades > 100:
+				current_user.grades = 100
+			return
+
 
 @application.route('/gameover')
 @login_required
