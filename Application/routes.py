@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
-from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, GameInput
+from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, UpdateInfo, GameInput
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
@@ -44,6 +44,20 @@ def login():
 			flash('Login unsuccessful. Email and/or password incorrect.')
 	return render_template('login.html', title='Login', form=form)
 
+@application.route('/account', methods=['GET', 'POST'])
+@login_required
+def account():
+	form = UpdateInfo()
+	if form.validate_on_submit():
+		current_user.username = form.username.data
+		current_user.email = form.email.data
+		db.session.commit()
+		flash('Info Updated', 'success')
+		return redirect(url_for('account'))
+	elif request.method == 'GET':
+		form.username.data = current_user.username
+		form.email.data = current_user.email
+	return render_template('account.html', title='Account Information', form=form)
 
 @application.route('/about')
 def about():
