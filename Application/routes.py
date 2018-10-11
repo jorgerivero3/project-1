@@ -4,6 +4,7 @@ from Application.forms import RegistrationForm, LoginForm, RequestResetForm, Res
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
+from Application.levels import master
 
 
 @application.route('/')
@@ -100,11 +101,15 @@ def game():
 		form = GameInput()
 		if form.validate_on_submit():
 			index = form.ans.data - 1 #arrays start at 0
-			
-		return redirect(url_for('game'))
+			eff = pageDetails.effects[index]
+			#manipulate db w/ effects here
+			current_user.progress = pageDetails.progress[index]
+			db.session.commit()
+			return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
 
 def get_level(progress):
+	return master[progress]
 
 
 @application.route('/gameover')
