@@ -13,8 +13,8 @@ tuesdays = ['d1','d2','d3','d4','d5','e5','d6','e6','d7','d8','e8''d9']
 
 #a1
 ["It's 8AM and your alarm rings, what do you do?", "1. Get out of bed", "2. Snooze the alarm"]
-[['-5s'], ['']]
-['a2','a3']
+[['-5s'], ['']] #effects
+['a2','a3'] #next level(s)
 #a2
 ["You head to class and take notes"]
 [['-2s-10e']]
