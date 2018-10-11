@@ -27,3 +27,9 @@ tuesdays = ['d1','d2','d3','d4','d5','e5','d6','e6','d7','d8','e8''d9']
 ["Following lunch you're a good student and go to class. When class ends, you're left with some difficult decisions.", "1. Go to office hours", '2. Hang out with friends']
 [[],[]]
 ['a5','b5']
+#a5
+["You went to office hours and now the professor knows your name and now you know what a polymer is."]
+['+5s']
+#a6
+["You hung out with your friends and played mario party to your heart's content"]
+['+10s']
