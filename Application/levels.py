@@ -17,7 +17,7 @@ tuesdays = ['d1','d2','d3','d4','d5','e5','d6','e6','d7','d8','e8''d9']
 ['a2','a3'] #next level(s)
 #a2
 ["You head to class and take notes"]
-[['-2s-10e']]
+[['-2s','-10e']]
 ['a3']
 #a3
 ["It's noon. You start getting hungry. What's for lunch?", "1. Ramen", "2. Don's", "3. CFA"]
