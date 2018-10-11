@@ -17,14 +17,9 @@ You think about just drifting off...about the sweet release of sleep.", "1. No, 
 [['-5s'], ['']] #effects
 ['a2','a3'] #next level(s)
 #a2
-<<<<<<< HEAD
 ["After some self-motivational pep talks, you groggly stumble out of bed, shower, and get dressed for another day at the greatest university in the world. \
 After praying you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class."]
 [['-2s-10e']]
-=======
-["You head to class and take notes"]
-[['-2s','-10e']]
->>>>>>> 00f62bcfc1d82bc882db45ae73174ca18805a6ae
 ['a3']
 #a3
 ["After enduring the most funfilled, totally-not-boring class ever, you manage to make it and are free. Now comes one of the most important decisions of your life so far - lunch. \
@@ -32,7 +27,6 @@ Where and what will you eat on this fine day?", "1. Ramen", "2. Don's", "3. CFA"
 [['+2e'],['+5e'],['+5e'],['+7e']]
 ['a4','a4','a4', 'a4']
 #a4
-<<<<<<< HEAD
 ["Following lunch you're such a good student you go to your other class today. However, as you sit down, the teacher says those dreaded \
 words: 'Ok, class, put everything away and get out a pen or pencil.' Oh no, a quiz. You didn't study, you had not idea this was coming, and you're probably screwed. \
 As the paper arrives in front of you, you see the first question: 'What is the volume of the sun when it was 1.2 million years old but only had 67.87 percent of its oxygen?", "1. What", '2. At least 3', '3. 765,543','4. Big']
@@ -63,14 +57,3 @@ bit of mercy and releases class early. You think about how much more fun you cou
 unlike them.", "Continue"]
 [['+10e']]
 ['a5',]
-=======
-["Following lunch you're a good student and go to class. When class ends, you're left with some difficult decisions.", "1. Go to office hours", '2. Hang out with friends']
-[[],[]]
-['a5','b5']
-#a5
-["You went to office hours and now the professor knows your name and now you know what a polymer is."]
-['+5s']
-#a6
-["You hung out with your friends and played mario party to your heart's content"]
-['+10s']
->>>>>>> 00f62bcfc1d82bc882db45ae73174ca18805a6ae
