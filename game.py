@@ -13,7 +13,7 @@ class Player(object):
 	def hurt(self, damage):
 		self.health -= damage
 
-		if self.heath <= 0: 
+		if self.health <= 0: 
 			self.death = True
 			return death
 
