@@ -10,11 +10,11 @@ class User(db.Model, UserMixin):
 	username = db.Column(db.String(20), unique=True, nullable=False)
 	email = db.Column(db.String(120), unique=True, nullable=False)
 	password = db.Column(db.String(60), nullable=False)
-	#character/game details
+	#character/game details not changeable by user
 	health = db.Column(db.Integer, nullable=False, default=100)
 	sanity = db.Column(db.Integer, nullable=False, default=100)
 	grades = db.Column(db.Integer, nullable=False, default=100)
-	progress = db.Column(db.Integer, nullable=False, default=0)
+	progress = db.Column(db.String(2), nullable=False, default='00')
 
 	def get_reset_token(self, expires_sec=1800):
 		s = Serializer(application.config['SECRET_KEY'], expires_sec)

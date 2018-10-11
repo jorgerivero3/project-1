@@ -86,31 +86,25 @@ def reset_token(token):
 	return render_template('reset_token.html', title='Reset Password', form=form)
 
 
-### GAME CODE ###
-#@application.route('/game')
-#@login_required
-#def game():
-#	return render_template('UTtrailGame.html', title='Gone to Texas', progress=current_user.progress, form=form)
+			#############################
+			######### GAME CODE #########
+			#############################
 
-
-@application.route('/game/<progress>', methods=['GET', 'POST'])
 @application.route('/game', methods=['GET', 'POST'])
 @login_required
 def game():
-	if current_user.progress == 1:
+	if current_user.progress == 'gg':
 		return redirect(url_for('gameover'))
-	form = GameInput()
-	if form.validate_on_submit():
-		if form.ans.data == 1:
-			current_user.health = current_user.health - 5
-		elif form.ans.data == 2:
-			current_user.sanity = current_user.sanity - 5
-		elif form.ans.data == 3:
-			current_user.grades = current_user.grades - 5
-		current_user.progress = current_user.progress + 1
-		db.session.commit()
+	else:
+		pageDetails = get_level(current_user.progress)
+		form = GameInput()
+		if form.validate_on_submit():
+			index = form.ans.data - 1 #arrays start at 0
+			
 		return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
+
+def get_level(progress):
 
 
 @application.route('/gameover')
