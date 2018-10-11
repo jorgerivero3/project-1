@@ -32,15 +32,17 @@
 			  	{% endif %}
 			</ul>
 		</div>
-		
+
 		{% with messages = get_flashed_messages(with_categories=true) %}
 			{% if messages %}
 				{% for catergory, message in messages %}
 					<div class = "alert alert-{{ category }}">
 						<p>{{ message }}</p>
+					</div>
 				{% endfor %}
 			{% endif %}
 		{% endwith %}
 		{% block content %}{% endblock %}
+
 	</body>
 </html>

@@ -1,17 +1,17 @@
 @font-face {
     font-family: Dude;
-    src: url(Dude_HankSr.otf);
+    src: url(./Fonts/Dude_HankSr.otf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: Hardware;
-    src: url(DDCHardware-Regular.otf);
+    src: url(./Fonts/DDCHardware-Regular.otf);
 }
 
 @font-face {
     font-family: airplane;
-    src: url(Airplane.ttf);
+    src: url(./Fonts/Airplane.ttf);
 }
 
 .theGrid {
@@ -27,7 +27,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background: url(70.jpg) no-repeat center center fixed; 
+  background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -38,7 +38,7 @@ body {
 body#home {
   height: 100vh;
   width: 100vw;
-  background: url(Snowmen.png) no-repeat center center fixed; 
+  background: url(./Backgrounds/Snowmen.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,7 +49,7 @@ body#home {
 body#about {
   height: 100vh;
   width: 100vw;
-  background: url(16.jpg) no-repeat center center fixed; 
+  background: url(./Backgrounds/16.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +60,7 @@ body#about {
 body#game {
   height: 100vh;
   width: 100vw;
-  background: url(70.jpg) no-repeat center center fixed; 
+  background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -70,16 +70,15 @@ body#game {
 
 h1 {
   font-family: 'Dude';
-  text-align: center;
   font-size: 75px;
   color: #bf5700;
-  margin: 10% 0 0;
+  margin: 10% 0 0 0;
 }
 h2 {
-  font-family: 'Dude';
-  font-size: 20px;
-  color: #bf5700;
-  font-weight: lighter;
+  font-family: 'Hardware';
+  font-size: 40px;
+  color: white;
+  margin: 30% 0 0 0;
 }
 h3 {
   font-family: 'Dude';
@@ -90,7 +89,7 @@ h3 {
 h4 {
   font-family: 'Dude';
   font-size: 14px;
-  color: #bf5700;
+  color: red;
   margin: 0 0 0 0;
     /* text-align: center; */
 }
@@ -113,21 +112,24 @@ h6 {
   padding: 0 200px;
 }
 h5 {
-  font-family: 'Dude';
+  font-family: 'airplane';
   font-size: 75px;
   color: #bf5700;
-  margin: 25px 0 0 0;
+  text-transform: lowercase;
 }
+
 small {
   font-family: 'airplane';
   font-size: 15px;
   color: white;
   margin: 25px 0 0 20px;
+  text-transform: lowercase;
 }
 /*a {
   font-family: 'airplane';
   font-size: 15px;
   color: darkslategrey;
+  text-transform: lowercase;
 }*/
 
 alert {

@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from Application import application, db, bcrypt
-from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, GameInput
+from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, UpdateInfo, GameInput
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
@@ -44,6 +44,20 @@ def login():
 			flash('Login unsuccessful. Email and/or password incorrect.')
 	return render_template('login.html', title='Login', form=form)
 
+@application.route('/account', methods=['GET', 'POST'])
+@login_required
+def account():
+	form = UpdateInfo()
+	if form.validate_on_submit():
+		current_user.username = form.username.data
+		current_user.email = form.email.data
+		db.session.commit()
+		flash('Info Updated', 'success')
+		return redirect(url_for('account'))
+	elif request.method == 'GET':
+		form.username.data = current_user.username
+		form.email.data = current_user.email
+	return render_template('account.html', title='Account Information', form=form)
 
 @application.route('/about')
 def about():
@@ -102,7 +116,7 @@ def game():
 		if form.validate_on_submit():
 			index = form.ans.data - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
-			#manipulate db w/ effects here
+			doEffect(eff)
 			current_user.progress = pageDetails.progress[index]
 			db.session.commit()
 			return redirect(url_for('game'))
@@ -110,6 +124,34 @@ def game():
 
 def get_level(progress):
 	return master[progress]
+
+def doEffect(array):
+	for string in array:
+		if string == '':
+			return
+		else:
+			if string[-1] == 'h':
+				if string[0] == '+':
+					current_user.health = current_user.health + int(string[1:-2])
+				else:
+					current_user.health = current_user.health - int(string[1:-2])
+			elif string[-1] == 's':
+				if string[0] == '+':
+					current_user.sanity = current_user.sanity + int(string[1:-2])
+				else:
+					current_user.sanity = current_user.sanity - int(string[1:-2])
+			else:
+				if string[0] == '+':
+					current_user.grades = current_user.grades + int(string[1:-2])
+				else:
+					current_user.grades = current_user.grades - int(string[1:-2])
+			if current_user.health > 100:
+				current_user.health = 100
+			if current_user.sanity > 100:
+				current_user.sanity = 100
+			if current_user.grades > 100:
+				current_user.grades = 100
+			return
 
 
 @application.route('/gameover')
