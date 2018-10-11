@@ -116,7 +116,7 @@ def game():
 		if form.validate_on_submit():
 			index = form.ans.data - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
-			#manipulate db w/ effects here
+			doEffect(eff)
 			current_user.progress = pageDetails.progress[index]
 			db.session.commit()
 			return redirect(url_for('game'))
