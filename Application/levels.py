@@ -5,7 +5,7 @@ class Level:
 		self.effects = effects
 		self.nextLevel = nextLevel
 
-all = {}
+master = {}
 
 #monday a-c, tuesday d-e
 mondays = ['a1','a2','a3','a4','a5','b5','a6','b6','c6','a7','a8','b8','a9']
@@ -56,4 +56,4 @@ As the paper arrives in front of you, you see the first question: 'What is the v
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "Continue"]
 [['+10e']]
-['a5',]
+['a5']
