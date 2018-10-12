@@ -1,9 +1,9 @@
 class Level:
-	def __init__(self, day, prompts, effects):
+	def __init__(self, day, prompts, effects, nextLevel):
 		self.day = day
 		self.prompts = prompts
 		self.effects = effects
-		self.progress = progress
+		self.nextLevel = nextLevel
 
 all = {}
 
