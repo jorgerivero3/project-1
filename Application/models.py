@@ -14,7 +14,7 @@ class User(db.Model, UserMixin):
 	health = db.Column(db.Integer, nullable=False, default=100)
 	sanity = db.Column(db.Integer, nullable=False, default=100)
 	grades = db.Column(db.Integer, nullable=False, default=100)
-	progress = db.Column(db.String(2), nullable=False, default='00')
+	progress = db.Column(db.String(2), nullable=False, default='a1')
 
 	def get_reset_token(self, expires_sec=1800):
 		s = Serializer(application.config['SECRET_KEY'], expires_sec)

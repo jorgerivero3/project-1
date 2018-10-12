@@ -1,20 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
 
-
 <body id="game">
-<div style="text-align: center">
-	{% if progress == 0 %}
-		<!-- picture -->
-		<h2>You are getting ready for the day. You should really go to class:</h2><br><br>
-		<p>
-		1. Go to class<br>
-		2. Skip class<br>
-		</p>
-	{% else %}
-		<!-- picture -->
-		This is not supposed to show up
-	{% endif %}
+<div style="text-align: left">
+	{% for prompt in prompts %}
+		{{ prompt }}<br>
+	{% endfor %}
 	<div class="theForm">
 		<form method="POST" action="/game">
 			{{ form.hidden_tag() }}

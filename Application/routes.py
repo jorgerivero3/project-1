@@ -120,7 +120,7 @@ def game():
 			current_user.progress = pageDetails.progress[index]
 			db.session.commit()
 			return redirect(url_for('game'))
-	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
+	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=pageDetails.prompts)
 
 def get_level(progress):
 	return master[progress]

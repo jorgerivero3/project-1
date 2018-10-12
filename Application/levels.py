@@ -7,6 +7,11 @@ class Level:
 
 master = {}
 
+#hi i'm just testing functionality real quick
+master['a1'] = Level('monday',["A sharp, loud sound awakens you from your peaceful slumber. 'Another day', you think to yourself. Laying in bed, it feels so comfy and nice. The bed might as well be cloud from heaven itself.\
+You think about just drifting off...about the sweet release of sleep.", "1. No, it's time for class", "2. Hit that snooze button"],[['-5s'], ['']],['a2','a3'])
+
+''' temporarily commented out for testing
 #monday a-c, tuesday d-e
 mondays = ['a1','a2','a3','a4','a5','b5','a6','b6','c6','a7','a8','b8','a9']
 tuesdays = ['d1','d2','d3','d4','d5','e5','d6','e6','d7','d8','e8''d9']
@@ -57,3 +62,4 @@ bit of mercy and releases class early. You think about how much more fun you cou
 unlike them.", "Continue"]
 [['+10e']]
 ['a5']
+'''
