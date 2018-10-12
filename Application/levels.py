@@ -56,4 +56,16 @@ As the paper arrives in front of you, you see the first question: 'What is the v
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "Continue"]
 [['+10e']]
-['a5',]
+['b5']
+#b5
+["While hanging out after class, one of friends comes up to youy and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
+However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good. I want some sleep and relaxation", "3. Hell yeah, I wanna forget about today anyway"]
+[[]]
+['a10', 'b6']
+#a10
+["While tempting, you decide against it, wishing to know what a good night's sleep is. After some studying, watching videos, and bingign netflix, you fall asleep, (not) ready for tomorrow.", "Next day"]
+[['+40e']]
+['d1']
+#b6
+
+
