@@ -3,7 +3,7 @@ class Level:
 	def __init__(self, level):
 		self.day = DAYS[level[0][0]]
 		self.story = level[1][0]
-		self.prompts = level[1][:]
+		self.prompts = level[1][1:]
 		self.effects = level[2]
 		self.next_level = level[3]
 

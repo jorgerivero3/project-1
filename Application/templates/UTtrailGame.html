@@ -4,8 +4,16 @@
 <body id="game">
 <div style="text-align: left">
 	<h2 style = "margin: 25% 0 0 0">
-	{% for prompt in prompts %}
-		{{ prompt }}<br>
+
+	{% for i in range(prompts|length) %}
+		{% if i == 1 %}
+			{% for options in prompts[i] %}
+				{{ options }} <br>
+			{% endfor %}
+		{% else %}
+			{{ prompts[i] }}
+			<br><br>
+		{% endif%}
 	{% endfor %}
 	<div class="theForm">
 		<form method="POST" action="/game">

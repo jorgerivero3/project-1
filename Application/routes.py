@@ -112,13 +112,13 @@ def game():
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
 		if form.validate_on_submit():
-			index = form.ans.data - 1 #arrays start at 0
+			index = int(form.ans.data) - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
 			doEffect(eff)
 			current_user.progress = pageDetails.progress[index]
 			db.session.commit()
 			return redirect(url_for('game'))
-	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=pageDetails.prompts)
+	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
 
 def get_level(progress):
 	return master[progress]
