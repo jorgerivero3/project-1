@@ -21,13 +21,13 @@ login_manager = LoginManager(application)
 login_manager.login_view = 'login'
 login_manager.login_message_category = 'info'
 
-''' idk how the mail stuff works
+
 application.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 application.config['MAIL_PORT'] = 587
 application.config['MAIL_USE_TLS'] = True
-application.config['MAIL_USERNAME'] = 'cs329efall18project1'
+application.config['MAIL_USERNAME'] = 'cs329efall18project0'
 application.config['MAIL_PASSWORD'] = 'texascompsci18'
 mail = Mail(application)
-'''
+
 
 from Application import routes

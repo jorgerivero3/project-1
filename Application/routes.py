@@ -1,10 +1,11 @@
 from flask import render_template, url_for, flash, redirect, request
-from Application import application, db, bcrypt
+from Application import application, db, bcrypt, mail
 from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, UpdateInfo, GameInput
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 from Application.levels import master
+from flask_mail import Message
 
 
 @application.route('/')
@@ -80,6 +81,16 @@ def password_retrieval():
 		return redirect(url_for('login'))
 	return render_template('password_retrieval.html', title='Reset Password', form=form)
 
+def send_reset_email(user):
+	token = user.get_reset_token()
+	msg = Message('Password Reset Request', sender='noreply@demo.com', recipients=[user.email])
+	msg.body = f''' To reset your password, click the following link, or copy and
+paste it into your web browser:
+{url_for('reset_token', token=token, _external=True)}
+
+If you did not make this request then please ignore this email.
+'''
+	mail.send(msg)
 
 @application.route("/reset_token/<token>", methods=['GET', 'POST'])
 def reset_token(token):

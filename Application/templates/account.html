@@ -5,9 +5,14 @@
       <h1>Your Account</h1>
 
       <h2 style= "margin: 5% 0 0 0">
-        Progress:
+        Progress: {{ current_user.progress }}
         <br>
-        Health Status:
+        Status:<br>
+        <p style="margin-left: 5%">
+          Health: {{ current_user.health }} <br>
+          Sanity: {{ current_user.sanity }} <br>
+          Grades: {{ current_user.grades }} <br>
+        </p>
       </h2>
 
         <!-- add routing stuff -->
@@ -20,11 +25,9 @@
       <p>Email: </p><p id = "UpdateEmail">{{ current_user.email }}</p>
       <button type="button" onclick="UpdateEmail()">Change Email</button>
     --->  
-      <form method="POST" action="" enctype="multipart/form-data">
+      <form method="POST" action="" enctype="multipart/form-data" style= "font-family: Hardware; font-size: 15px">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-              
-                <legend class="border-bottom mb-4">Change Account Info</legend>
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
 
@@ -59,7 +62,6 @@
             </div>
 
       </form>
-
     </div>
   </div>
 
