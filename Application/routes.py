@@ -122,7 +122,7 @@ def game():
 	else:
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
-		if form.validate_on_submit():
+		if form.validate_on_submit() and (int(form.ans.data) in range(1, pageDetails.num_choices() + 1)):
 			index = int(form.ans.data) - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
 			doEffect(eff)
