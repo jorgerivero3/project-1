@@ -4,19 +4,22 @@
     <div class='left-body'>
       <h1>Your Account</h1>
 
-        <br><br>
+      <h2 style= "margin: 5% 0 0 0">
+        Progress:
+        <br>
+        Health Status:
+      </h2>
 
         <!-- add routing stuff -->
       <h3>Change Account Info</h3>
 
-      <style>
-        function Update() {
-          document.getElementById("UpdateInfo").innerHTML = "whoops nope";
-        }
-      </style>
-      <p>Character Name: </p><p id = "UpdateInfo">{{ current_user.username }}</p>
-      <button type="button" onclick="Update()">Change Character Name</button>
-      <!---  
+<!---  
+      <p>Character Name: </p><p id = "UpdateUsername">{{ current_user.username }}</p>
+      <button type="button" onclick="UpdateUsername()">Change Character Name</button>
+      <br><br>
+      <p>Email: </p><p id = "UpdateEmail">{{ current_user.email }}</p>
+      <button type="button" onclick="UpdateEmail()">Change Email</button>
+    --->  
       <form method="POST" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -56,7 +59,7 @@
             </div>
 
       </form>
---->
+
     </div>
   </div>
 

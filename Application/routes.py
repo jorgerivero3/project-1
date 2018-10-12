@@ -9,8 +9,6 @@ from Application.levels import master
 
 @application.route('/')
 def home():
-	if current_user.is_authenticated:
-		return redirect(url_for('game'))
 	return render_template('/home.html', title='The UT Trail')
 
 

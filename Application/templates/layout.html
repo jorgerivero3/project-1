@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<script src= "{{url_for('static', filename='script.js')}}"></script>
 	<head>
 		<!--  Meta  -->
 		<meta charset="UTF-8" />
@@ -22,8 +22,8 @@
 			<ul>
 			  <a href="/">The UT Trail</a>
 			  	{%if current_user.is_authenticated %}
-			  		<a href="/account">Account</a>
 			  		<a href="/about">About the Game</a>
+			  		<a href="/account">Account</a>
 			  		<a href="/logout">Logout</a>
 			  	{% else %}
 			  		<a href="/about">About the Game</a>
