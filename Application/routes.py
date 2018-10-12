@@ -126,7 +126,7 @@ def game():
 			index = int(form.ans.data) - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
 			doEffect(eff)
-			current_user.progress = pageDetails.progress[index]
+			current_user.progress = pageDetails.get_next_level(index)
 			db.session.commit()
 			return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
@@ -141,19 +141,20 @@ def doEffect(array):
 		else:
 			if string[-1] == 'h':
 				if string[0] == '+':
-					current_user.health = current_user.health + int(string[1:-2])
+					current_user.health = current_user.health + int(string[1:-1])
 				else:
-					current_user.health = current_user.health - int(string[1:-2])
+					current_user.health = current_user.health - int(string[1:-1])
 			elif string[-1] == 's':
 				if string[0] == '+':
-					current_user.sanity = current_user.sanity + int(string[1:-2])
+					current_user.sanity = current_user.sanity + int(string[1:-1])
 				else:
-					current_user.sanity = current_user.sanity - int(string[1:-2])
+					current_user.sanity = current_user.sanity - int(string[1:-1])
 			else:
 				if string[0] == '+':
-					current_user.grades = current_user.grades + int(string[1:-2])
+					current_user.grades = current_user.grades + int(string[1:-1])
 				else:
-					current_user.grades = current_user.grades - int(string[1:-2])
+					current_user.grades = current_user.grades - int(string[1:-1])
+
 			if current_user.health > 100:
 				current_user.health = 100
 			if current_user.sanity > 100:

@@ -5,7 +5,7 @@ class Level:
 		self.story = level[1][0]
 		self.prompts = level[1][1:]
 		self.effects = level[2]
-		self.next_level = level[3]
+		self.nextLevel = level[3]
 
 	def get_next_level(self, choice):
 		return self.nextLevel[choice - 1]
