@@ -54,11 +54,6 @@ unlike them.", "1. Continue"], [['+10e']], ['a5']]
 levelNames = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
 
 #Builds the Level objects with the scripts above
-def compileLevels(levelNames):
-	temp = {}
-	for script in levelNames:
-		level = Level(script)
-		temp[script[0]] = level
-	return temp
-
-master = compileLevels(levelNames)
+for script in levelNames:
+	level = Level(script)
+	master[script[0]] = level
