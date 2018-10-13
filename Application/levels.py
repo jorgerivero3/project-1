@@ -1,5 +1,4 @@
 class Level:
-	
 	def __init__(self, level):
 		self.day = DAYS[level[0][0]]
 		self.story = level[1][0]
@@ -52,14 +51,14 @@ a9 = ["a9", ["You instantly regret going to class since you would have made a 0 
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "1. Continue"], [['+10e']], ['a5']] 
 
-levels = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
+levelNames = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
 
-#Builds the Level objects with the scripts above 
-for script in levels:
-	level = Level(script)
-	master[script[0]] = level
+#Builds the Level objects with the scripts above
+def compileLevels(levelNames):
+	temp = {}
+	for script in levelNames:
+		level = Level(script)
+		temp[script[0]] = level
+	return temp
 
-
-
-
-
+master = compileLevels(levelNames)
