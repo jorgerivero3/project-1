@@ -18,7 +18,6 @@ class functiontesting(unittest.TestCase):
 
 	def test_levels():
 		self.assertTrue(len(levels.master != 0)) #non empty dictionary
-
 	
 	def test_effects(index, pageDetails): #testing function from routes
 		eff = pageDetails.effects[index]
@@ -28,6 +27,9 @@ class functiontesting(unittest.TestCase):
 	def test_update(index, pageDetails):
 		current_user.progress = pageDetails.get_next_level(index)
 		self.asserEqual(current_user.progress, 'a2') #specific to choice
+
+	# NEEDS TO TEST THE WRONG STUFF
+	#def test_wrong_input
 
 if __name__ == '__main__':
 	unittest.main()
