@@ -37,7 +37,7 @@ words: 'Ok, class, put everything away and get out a pen or pencil.' Oh no, a qu
 As the paper arrives in front of you, you see the first question: 'What is the volume of the sun when it was 1.2 million years old but only had 67.87 percent of its oxygen?", "1. What", '2. At least 3', '3. 765,543','4. Big'], [['-2e'],['-2e'],['-2e'],['-2e']], ['a5','a5', 'a5', 'a5']]
 
 a5 = ["a5", ["Yeah, that sounds right. Next question: 'What happened on the Isle of Ceylon on June 15th, 1954?", 
-"1. I'm so confused.", "2. George R. R. Martin started Game of Thrones", "3. OU continued to suck" "4. The sun went out"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a6','a6', 'a6', 'a6']]
+"1. I'm so confused.", "2. George R. R. Martin started Game of Thrones", "3. OU continued to suck", "4. The sun went out"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a6','a6', 'a6', 'a6']]
 
 a6 = ["a6", ["'What are these questions', you think to yourself, as you move on to question #3: \
 'What is considered the 3rd minor chord of the A flat minor-harmonic scale in bass clef?", "1. What's a clef", "2. Just let this end", "3. G sharp", "4. A natural"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a7','a7', 'a7', 'a7']] 
