@@ -166,5 +166,5 @@ def doEffect(current_user, array):
 
 @application.route('/gameover')
 @login_required
-def gameover():
-	return render_template('gameover.html', health=current_user.health, sanity=current_user.sanity, grades=current_user.grades)
+def gameover(): # will need to make a button
+	return render_template('gameover.html')
