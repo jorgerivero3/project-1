@@ -27,7 +27,7 @@ a1 = ["a1", ["A sharp, loud sound awakens you from your peaceful slumber. 'Anoth
 You think about just drifting off...about the sweet release of sleep.", "1. No, it's time for class", "2. Hit that snooze button"], [['-5s'], ['']], ['a2','a3']]
 
 a2 = ["a2", ["After some self-motivational pep talks, you groggly stumble out of bed, shower, and get dressed for another day at the greatest university in the world. \
-After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s-10e']], ['a3']]
+After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s','-10e']], ['a3']]
 
 a3 = ["a3", ["After enduring the most fun-filled, totally-not-boring class ever, you manage to make it and are free. Now comes one of the most important decisions of your life so far - lunch. \
 Where and what will you eat on this fine day?", "1. Ramen", "2. Don's", "3. CFA", "4. Chic-Fil-A"], [['+2e'],['+5e'],['+5e'],['+7e']], ['a4','a4','a4', 'a4']]
