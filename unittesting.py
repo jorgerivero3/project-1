@@ -6,10 +6,10 @@ from Application.routes import get_level, doEffect
 
 class functiontesting(unittest.TestCase):
 	
-	def test_levels():
-		self.assertTrue(len(levels.master != 0)) #non empty dictionary
+	def test_levels(self):
+		self.assertTrue(len(Application.levels.master != 0)) #non empty dictionary
 	
-	def test_effects(index, pageDetails): #testing function from routes
+	def test_effects(self): #testing function from routes
 		current_user = User() #create object
 		#initialize stats
 		current_user.health = 100
@@ -21,10 +21,10 @@ class functiontesting(unittest.TestCase):
 		pageDetails = get_level(current_user.progress)
 		#function within routes
 		eff = pageDetails.effects[index]
-		doEffect(eff)
-		self.asserEqual(current_user.sanity, 95) #effect specific to choice
+		doEffect(current_user, eff)
+		self.assertEqual(current_user.sanity, 95) #effect specific to choice
 
-	def test_update(index, pageDetails):
+	def test_update(self):
 		current_user = User() #create object
 		#progress/choice
 		index = 0
@@ -32,9 +32,10 @@ class functiontesting(unittest.TestCase):
 		pageDetails = get_level(current_user.progress)
 		#function within routes
 		current_user.progress = pageDetails.get_next_level(index)
-		self.asserEqual(current_user.progress, 'a2') #specific to choice
+		self.assertEqual(current_user.progress, 'a2') #specific to choice
 
 	# NEEDS TO TEST THE WRONG STUFF
+
 	#def test_wrong_input
 
 if __name__ == '__main__':
