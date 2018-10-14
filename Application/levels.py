@@ -7,7 +7,7 @@ class Level:
 		self.nextLevel = level[3]
 
 	def get_next_level(self, choice):
-		return self.nextLevel[choice - 1]
+		return self.nextLevel[choice]
 
 	def num_choices(self):
 		return len(self.prompts)

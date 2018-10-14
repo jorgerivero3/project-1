@@ -7,7 +7,7 @@ from Application.routes import get_level, doEffect
 class functiontesting(unittest.TestCase):
 	
 	def test_levels(self):
-		self.assertTrue(len(Application.levels.master != 0)) #non empty dictionary
+		self.assertTrue(len(Application.levels.master) != 0) #non empty dictionary
 	
 	def test_effects(self): #testing function from routes
 		current_user = User() #create object
