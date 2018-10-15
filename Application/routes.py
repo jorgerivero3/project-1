@@ -177,6 +177,16 @@ def doEffect(current_user, array):
 def gameover(): # will need to make a button
 	return render_template('gameover.html')
 
-@application.route('/coming_soon')
-def coming_soon(): 
+@application.route('/coming_soon', methods=['GET', 'POST'])
+
+def coming_soon():
+
 	return render_template('coming_soon.html')
+
+
+
+	
+
+
+def reset_game():
+	current_user.progress = 'a1'
