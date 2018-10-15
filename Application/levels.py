@@ -12,6 +12,8 @@ class Level:
 	def num_choices(self):
 		return len(self.prompts)
 
+
+
 master = {}
 
 
@@ -52,11 +54,13 @@ bit of mercy and releases class early. You think about how much more fun you cou
 unlike them.", "1. Continue"], [['+10e']], ['b1']] 
 
 b1 = ['b1', ["While hanging out after class, one of friends comes up to youy and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
-However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b1']]
+However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b2']]
 
 a10 = ["a10", ["While a party sounds fun, you just want to be able to sleep soundly and relax peacefully that night. After some hours of studying, watching netflix, and eating dinner, you fall asleep peacefully \
 (not) ready for the day tomorrow", "Continue to next day"], ['+40e'], ['d1']]
 
+
+# Originally no character effects here, code not yet written to handle situations without effects. Temp added one. -Jorge
 b2 = ['b2', ["After grueling through the whole day, you figure you deserve some time to have fun. After getting the address and start time, you head home and get ready. Now, what time should \
 you arrive at the party?", "1. 10:00, right on start time", "10:45, late enough but still early"], [], ["b3", "b4"]]
 
@@ -99,7 +103,7 @@ d2 = ["d2", ["You get up, brush your teeth, get dressed, and head out for the da
 d3 = ["d3", ["You decide to do nothing today, and pretty much laze around, binging The Office on Netflix and eating some snacks. Eventually you go to sleep later that night (yeah that's the end)", 
 "Continue"], ["+10e"], ["g1"]]
 
-d4 = ["d4", ["You study for a little while, then get bored and watch Netflix instead. Why can't you ever focus?"], ["+5e"], ["d5"]]
+d4 = ["d4", ["You study for a little while, then get bored and watch Netflix instead. Why can't you ever focus?", "1. Continue"], ["+5e"], ["d5"]]
 
 d5 = ["d5", ["You start watching Netflix as watching it on campus just feels better. Maybe you like the feeling that \
 because you're on campus, you're actually doing something productive, no matter what it is.", "Whatever, it's Friday"], [["+1e"]], ["d7"]]
@@ -124,12 +128,16 @@ e2 = ["e2", ["You text the gm and start coming up with ideas. You're assigned th
 [], ["e3", "e3", "e3", "e3"]]
 
 e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it, and now you're ready for tomorrow. you head home locked in and ready to go. Those Aggies won't know what hit them.", "Hook 'em"], 
-["+40e"], ["gg"]]
+["+40e"], ["cs"]]
+
+
+
 
 levels = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, c1, c2,
-d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, e1, e2, e3, gg]
+d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, e1, e2, e3]
+
 
 #Builds the Level objects with the scripts above
-for script in levelNames:
+for script in levels:
 	level = Level(script)
 	master[script[0]] = level

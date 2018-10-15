@@ -30,5 +30,8 @@ class User(db.Model, UserMixin):
 			return None
 		return User.query.get(user_id)
 
+	def is_dead(self):
+		return self.health <= 0
+
 	def __repr__(self):
 		return f"User('{self.username}', '{self.health}', '{self.sanity}', '{self.grades}')"

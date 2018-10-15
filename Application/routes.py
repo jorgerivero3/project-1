@@ -119,19 +119,27 @@ def reset_token(token):
 def game():
 	if current_user.progress == 'gg':
 		return redirect(url_for('gameover'))
+	elif current_user.progress == 'cs':
+		return redirect(url_for('coming_soon'))
 	else:
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
 		if form.validate_on_submit() and (int(form.ans.data) in range(1, pageDetails.num_choices() + 1)):
 			index = int(form.ans.data) - 1 #arrays start at 0
-			eff = pageDetails.effects[index]
-			doEffect(current_user, eff)
-			current_user.progress = pageDetails.get_next_level(index)
+			if pageDetails.effects:
+				eff = pageDetails.effects[index]
+				doEffect(current_user, eff)
+
+			if current_user.is_dead():
+				current_user.progress = 'gg'
+			else:
+				current_user.progress = pageDetails.get_next_level(index)
+
 			db.session.commit()
 			return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
 
-def get_level(progress): # master will be outside of scope oops
+def get_level(progress):
 	return master[progress]
 
 def doEffect(current_user, array):
@@ -149,7 +157,7 @@ def doEffect(current_user, array):
 					current_user.sanity = current_user.sanity + int(string[1:-1])
 				else:
 					current_user.sanity = current_user.sanity - int(string[1:-1])
-			else:
+			elif string[-1] == 'g':
 				if string[0] == '+':
 					current_user.grades = current_user.grades + int(string[1:-1])
 				else:
@@ -168,3 +176,7 @@ def doEffect(current_user, array):
 @login_required
 def gameover(): # will need to make a button
 	return render_template('gameover.html')
+
+@application.route('/coming_soon')
+def coming_soon(): 
+	return render_template('coming_soon.html')
