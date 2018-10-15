@@ -2,9 +2,8 @@
 {% block content %}
 
 <body id="game">
-<div style="text-align: left">
-	<h2 style = "margin: 25% 0 0 0">
-
+<div style="text-align: left; position: absolute; bottom: 0; padding: 0 5% 0 0;">
+	<h2 style = "margin: 0 0 0 0">
 	{% for i in range(prompts|length) %}
 		{% if i == 1 %}
 			{% for options in prompts[i] %}
