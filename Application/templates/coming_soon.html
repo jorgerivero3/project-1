@@ -7,25 +7,26 @@
 </div>
 
 <div>
-<h1>Your stats:</h1><br>
-Health: {{ current_user.grades }} <br>
-{% if current_user.grades < 70 %}
-	<h2>GPA: 0.0<br></h2>
-{% elif current_user.grades < 80 %}
-	<h2>GPA: 1.0<br></h2>
-{% elif current_user.grades < 90 %}
-	<h2>GPA: 3.0<br></h2>
-{% else %}
-	<h2>GPA: 4.0<br></h2>
-{% endif %}
+	<h2 style= "text-align: center; margin-top: 13%">Your Current Status:</h2><br>
+	<p style="text-align: center">
+		Health: {{ current_user.grades }} <br>
+		{% if current_user.grades < 70 %}
+			GPA: 0.0<br>
+		{% elif current_user.grades < 80 %}
+			GPA: 1.0<br>
+		{% elif current_user.grades < 90 %}
+			GPA: 3.0<br>
+		{% else %}
+			GPA: 4.0<br>
+		{% endif %}
 
-{% if current_user.sanity < 70 %}
-	Sanity: Non-existant
-{% elif current_user.sanity < 85 %}
-	Sanity: About to snap
-{% else %}
-	Sanity: This is fine.
-{% endif %}
+		{% if current_user.sanity < 70 %}
+			Sanity: Non-existant
+		{% elif current_user.sanity < 85 %}
+			Sanity: About to snap
+		{% else %}
+			Sanity: Everything is fine... for now.
+		{% endif %}
 </div>
  
 {% endblock %}
