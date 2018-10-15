@@ -1,7 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<h2>To be continued. More levels coming soon!</h2>
+<div class="center">
+<h1>To be continued... </h1>
+<h1>More levels coming soon! </h1>
+</div>
 
+<div>
+<h1>Your stats:</h1><br>
+Health: {{ current_user.grades }} <br>
+{% if current_user.grades < 70 %}
+	<h2>GPA: 0.0<br></h2>
+{% elif current_user.grades < 80 %}
+	<h2>GPA: 1.0<br></h2>
+{% elif current_user.grades < 90 %}
+	<h2>GPA: 3.0<br></h2>
+{% else %}
+	<h2>GPA: 4.0<br></h2>
+{% endif %}
+
+{% if current_user.sanity < 70 %}
+	Sanity: Non-existant
+{% elif current_user.sanity < 85 %}
+	Sanity: About to snap
+{% else %}
+	Sanity: This is fine.
+{% endif %}
+</div>
  
 {% endblock %}

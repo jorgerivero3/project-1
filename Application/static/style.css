@@ -328,6 +328,11 @@ a {
 
 }
 
+.center{
+  text-align: center;
+
+}
+
 
 input {
   border: black;
