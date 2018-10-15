@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<body id="home">
+
+<div style="text-align: center">
+	<h3>CAN YOU SURVIVE THE WEEK...</h3>
+	<h1>The Texas Trail</h1>
+	<h6 class="subtitle">Longhorn Edition</h6>
+	<br><br><br>
+	{%if current_user.is_authenticated %}
+		<p><a href="/game">Let's get jiggy</a></p><br>
+		<p><a href="/about">More about the game</a></p>
+	{% else %}
+		<p><a href="/login">Log In and Begin your ADVENTURE</a></p><br>
+		<p><a href="/about">More about the game</a></p>
+	{% endif %}
+</div>
+</body>
+
+{% endblock %}

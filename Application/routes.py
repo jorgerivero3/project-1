@@ -1,16 +1,15 @@
 from flask import render_template, url_for, flash, redirect, request
-from Application import application, db, bcrypt
+from Application import application, db, bcrypt, mail
 from Application.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, UpdateInfo, GameInput
 from Application.models import User
 from flask_login import login_user, current_user, logout_user, login_required
 import os
 from Application.levels import master
+from flask_mail import Message
 
 
 @application.route('/')
 def home():
-	if current_user.is_authenticated:
-		return redirect(url_for('game'))
 	return render_template('/home.html', title='The UT Trail')
 
 
@@ -82,6 +81,16 @@ def password_retrieval():
 		return redirect(url_for('login'))
 	return render_template('password_retrieval.html', title='Reset Password', form=form)
 
+def send_reset_email(user):
+	token = user.get_reset_token()
+	msg = Message('Password Reset Request', sender='noreply@demo.com', recipients=[user.email])
+	msg.body = f''' To reset your password, click the following link, or copy and
+paste it into your web browser:
+{url_for('reset_token', token=token, _external=True)}
+
+If you did not make this request then please ignore this email.
+'''
+	mail.send(msg)
 
 @application.route("/reset_token/<token>", methods=['GET', 'POST'])
 def reset_token(token):
@@ -114,13 +123,13 @@ def game():
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
 		if form.validate_on_submit():
-			index = form.ans.data - 1 #arrays start at 0
+			index = int(form.ans.data) - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
 			doEffect(eff)
-			current_user.progress = pageDetails.progress[index]
+			current_user.progress = pageDetails.get_next_level(index)
 			db.session.commit()
 			return redirect(url_for('game'))
-	return render_template('UTtrailGame.html', title='hookem', progress=current_user.progress, form=form)
+	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
 
 def get_level(progress):
 	return master[progress]
@@ -132,19 +141,20 @@ def doEffect(array):
 		else:
 			if string[-1] == 'h':
 				if string[0] == '+':
-					current_user.health = current_user.health + int(string[1:-2])
+					current_user.health = current_user.health + int(string[1:-1])
 				else:
-					current_user.health = current_user.health - int(string[1:-2])
+					current_user.health = current_user.health - int(string[1:-1])
 			elif string[-1] == 's':
 				if string[0] == '+':
-					current_user.sanity = current_user.sanity + int(string[1:-2])
+					current_user.sanity = current_user.sanity + int(string[1:-1])
 				else:
-					current_user.sanity = current_user.sanity - int(string[1:-2])
+					current_user.sanity = current_user.sanity - int(string[1:-1])
 			else:
 				if string[0] == '+':
-					current_user.grades = current_user.grades + int(string[1:-2])
+					current_user.grades = current_user.grades + int(string[1:-1])
 				else:
-					current_user.grades = current_user.grades - int(string[1:-2])
+					current_user.grades = current_user.grades - int(string[1:-1])
+
 			if current_user.health > 100:
 				current_user.health = 100
 			if current_user.sanity > 100:

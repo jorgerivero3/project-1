@@ -70,9 +70,10 @@ body#game {
 
 h1 {
   font-family: 'Dude';
-  font-size: 75px;
+  font-size: 85px;
   color: #bf5700;
   margin: 10% 0 0 0;
+  padding: 0;
 }
 h2 {
   font-family: 'Hardware';
@@ -104,12 +105,30 @@ p {
   font-size: 20px;
   color: darkslateblue;
   margin: 0 0 0 27.5px;
+  z-index: 1000;
+}
+a {
+  transition: 1s ease;
+}
+a:hover {
+  color: black;
 }
 h6 {
   font-family: 'Hardware';
   font-size: 15px;
   color: white;
   padding: 0 200px;
+}
+.subtitle {
+  font-family: 'Hardware';
+  font-size: 25px;
+  color: #666699;
+  padding: -20px 0 20px 0;
+  margin: 0;
+  transition: 1s ease;2
+}
+.subtitle:hover {
+  color: #29293d;
 }
 h5 {
   font-family: 'airplane';
@@ -283,7 +302,7 @@ input {
   width: 260px;
   background-color: transparent;
   padding: 20px 0 20px 0;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Hardware';
 }
 input:focus {
