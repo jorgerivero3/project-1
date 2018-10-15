@@ -295,6 +295,32 @@ a {
     color: blue;
 }
 
+.start .danger h3{
+  position: relative;
+  top: -120px;
+}
+.start h1{
+  position: relative;
+  top: -265px;
+}
+
+.startAnim{
+  position: absolute;
+  top: 185px;
+  left: 135px;
+  height: 350px;
+  width: 450px;
+
+}
+.startAnim img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  
+}
+
+
+
 input {
   border: none;
   border-bottom: 2px solid darkGray;

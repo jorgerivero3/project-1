@@ -122,19 +122,19 @@ def game():
 	else:
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
-		if form.validate_on_submit():
+		if form.validate_on_submit() and (int(form.ans.data) in range(1, pageDetails.num_choices() + 1)):
 			index = int(form.ans.data) - 1 #arrays start at 0
 			eff = pageDetails.effects[index]
-			doEffect(eff)
+			doEffect(current_user, eff)
 			current_user.progress = pageDetails.get_next_level(index)
 			db.session.commit()
 			return redirect(url_for('game'))
 	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
 
-def get_level(progress):
+def get_level(progress): # master will be outside of scope oops
 	return master[progress]
 
-def doEffect(array):
+def doEffect(current_user, array):
 	for string in array:
 		if string == '':
 			return
@@ -166,5 +166,5 @@ def doEffect(array):
 
 @application.route('/gameover')
 @login_required
-def gameover():
-	return render_template('gameover.html', health=current_user.health, sanity=current_user.sanity, grades=current_user.grades)
+def gameover(): # will need to make a button
+	return render_template('gameover.html')

@@ -1,5 +1,4 @@
 class Level:
-	
 	def __init__(self, level):
 		self.day = DAYS[level[0][0]]
 		self.story = level[1][0]
@@ -8,7 +7,7 @@ class Level:
 		self.nextLevel = level[3]
 
 	def get_next_level(self, choice):
-		return self.nextLevel[choice - 1]
+		return self.nextLevel[choice]
 
 	def num_choices(self):
 		return len(self.prompts)
@@ -28,7 +27,7 @@ a1 = ["a1", ["A sharp, loud sound awakens you from your peaceful slumber. 'Anoth
 You think about just drifting off...about the sweet release of sleep.", "1. No, it's time for class", "2. Hit that snooze button"], [['-5s'], ['']], ['a2','a3']]
 
 a2 = ["a2", ["After some self-motivational pep talks, you groggly stumble out of bed, shower, and get dressed for another day at the greatest university in the world. \
-After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s-10e']], ['a3']]
+After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s','-10e']], ['a3']]
 
 a3 = ["a3", ["After enduring the most fun-filled, totally-not-boring class ever, you manage to make it and are free. Now comes one of the most important decisions of your life so far - lunch. \
 Where and what will you eat on this fine day?", "1. Ramen", "2. Don's", "3. CFA", "4. Chic-Fil-A"], [['+2e'],['+5e'],['+5e'],['+7e']], ['a4','a4','a4', 'a4']]
@@ -38,7 +37,7 @@ words: 'Ok, class, put everything away and get out a pen or pencil.' Oh no, a qu
 As the paper arrives in front of you, you see the first question: 'What is the volume of the sun when it was 1.2 million years old but only had 67.87 percent of its oxygen?", "1. What", '2. At least 3', '3. 765,543','4. Big'], [['-2e'],['-2e'],['-2e'],['-2e']], ['a5','a5', 'a5', 'a5']]
 
 a5 = ["a5", ["Yeah, that sounds right. Next question: 'What happened on the Isle of Ceylon on June 15th, 1954?", 
-"1. I'm so confused.", "2. George R. R. Martin started Game of Thrones", "3. OU continued to suck" "4. The sun went out"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a6','a6', 'a6', 'a6']]
+"1. I'm so confused.", "2. George R. R. Martin started Game of Thrones", "3. OU continued to suck", "4. The sun went out"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a6','a6', 'a6', 'a6']]
 
 a6 = ["a6", ["'What are these questions', you think to yourself, as you move on to question #3: \
 'What is considered the 3rd minor chord of the A flat minor-harmonic scale in bass clef?", "1. What's a clef", "2. Just let this end", "3. G sharp", "4. A natural"], [['-2e'],['-2e'],['-2e'],['-2e']], ['a7','a7', 'a7', 'a7']] 
@@ -52,6 +51,7 @@ a9 = ["a9", ["You instantly regret going to class since you would have made a 0 
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "1. Continue"], [['+10e']], ['b1']] 
 
+<<<<<<< HEAD
 b1 = ['b1', ["While hanging out after class, one of friends comes up to youy and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
 However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b1']]
 
@@ -121,13 +121,11 @@ first time since 2011, when we won on that last second field goal (suck it, Aggi
 e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide "]]
 levels = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, c1, c2,
 d1, d2, d3, d4, d5, d6, d7, d8, d9, d10]
+=======
+levelNames = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
+>>>>>>> 177add1fea463ae745a516b3328270b0e9fa7ed2
 
-#Builds the Level objects with the scripts above 
-for script in levels:
+#Builds the Level objects with the scripts above
+for script in levelNames:
 	level = Level(script)
 	master[script[0]] = level
-
-
-
-
-
