@@ -4,22 +4,18 @@
 
 <body id="home">
 
-<div class="start" style="text-align: center">
+<div class="start" style="padding: 5% 0 0 5%; margin: 0">
 	<span class="danger"><h3>CAN YOU SURVIVE THE WEEK...</h3></span>
 	<h1>The Texas Trail</h1>
-	<div class="startAnim">
-		<img src='../static/UTTower.png'>
-		<img src='../static/FlagAnim.gif'>
-		<img src='../static/walkScene.gif'>
-	</div>
-	<h6 class="subtitle">Longhorn Edition</h6>
+
+	<h6 class="subtitle" style="padding: 0 0 0 0; margin: 0">Longhorn Edition</h6>
 	<br><br><br>
 	{%if current_user.is_authenticated %}
-		<p><a href="/game">Let's get jiggy</a></p><br>
-		<p><a href="/about">More about the game</a></p>
+		<p style="padding: 0 0 0 0; margin: 0"><a href="/game">Let's get jiggy</a></p><br>
+		<p style="padding: 0 0 0 0; margin: 0"><a href="/about">More about the game</a></p>
 	{% else %}
-		<p><a href="/login">Log In and Begin your ADVENTURE</a></p><br>
-		<p><a href="/about">More about the game</a></p>
+		<p style="padding: 0 0 0 0; margin: 0"><a href="/login">Begin your ADVENTURE</a></p><br>
+		<p style="padding: 0 0 0 0; margin: 0"><a href="/about">More about the game</a></p>
 	{% endif %}
 </div>
 </body>

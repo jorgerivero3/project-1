@@ -1,17 +1,17 @@
 @font-face {
-    font-family: Dude;
-    src: url(./Fonts/Dude_HankSr.otf);
-    font-weight: bold;
+  font-family: Dude;
+  src: url(./Fonts/Dude_HankSr.otf);
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: Hardware;
-    src: url(./Fonts/DDCHardware-Regular.otf);
+  font-family: Hardware;
+  src: url(./Fonts/DDCHardware-Regular.otf);
 }
 
 @font-face {
-    font-family: airplane;
-    src: url(./Fonts/Airplane.ttf);
+  font-family: airplane;
+  src: url(./Fonts/Airplane.ttf);
 }
 
 .theGrid {
@@ -25,8 +25,8 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 95vh;
+  width: 99vw;
   background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -36,20 +36,21 @@ body {
 }
 
 body#home {
-  height: 100vh;
-  width: 100vw;
-  background: url(./Backgrounds/Snowmen.png) no-repeat center center fixed; 
+  height: 95vh;
+  width: 99vw;
+  background: url(./Backgrounds/walkScene.gif), url(./Backgrounds/UTTower.png), url(./Backgrounds/FlagAnim.gif), url(./Backgrounds/sky.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: 107% 107%;
+  background-position: center;
   overflow-x: hidden;
 }
 
 body#about {
-  height: 100vh;
-  width: 100vw;
-  background: url(./Backgrounds/16.jpg) no-repeat center center fixed; 
+  height: 95vh;
+  width: 99vw;
+  background: url(./Backgrounds/16.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -58,8 +59,8 @@ body#about {
 }
 
 body#game {
-  height: 100vh;
-  width: 100vw;
+  height: 95vh;
+  width: 99vw;
   background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -73,20 +74,22 @@ h1 {
   font-size: 85px;
   color: #bf5700;
   margin: 10% 0 0 0;
-  padding: 0;
 }
+
 h2 {
   font-family: 'Hardware';
   font-size: 40px;
   color: white;
   margin: 30% 0 0 0;
 }
+
 h3 {
   font-family: 'Dude';
   font-size: 35px;
   color: #bf5700;
   margin: 10% 0 0 0;
 }
+
 h4 {
   font-family: 'Dude';
   font-size: 14px;
@@ -94,12 +97,28 @@ h4 {
   margin: 0 0 0 0;
     /* text-align: center; */
 }
+
+h5 {
+  font-family: 'airplane';
+  font-size: 75px;
+  color: #bf5700;
+  text-transform: lowercase;
+}
+
+h6 {
+  font-family: 'Hardware';
+  font-size: 15px;
+  color: white;
+  padding: 0 200px;
+}
+
 button {
   font-family: 'Hardware';
   font-size: 20px;
   color: white;
-        /* font-weight: lighter; */
+  /* font-weight: lighter; */
 }   
+
 p {
   font-family: 'Hardware';
   font-size: 20px;
@@ -107,34 +126,26 @@ p {
   margin: 0 0 0 27.5px;
   z-index: 1000;
 }
+
 a {
   transition: 1s ease;
+  text-decoration: none;
+  color: grey;
 }
+
 a:hover {
   color: black;
 }
-h6 {
-  font-family: 'Hardware';
-  font-size: 15px;
-  color: white;
-  padding: 0 200px;
-}
+
 .subtitle {
   font-family: 'Hardware';
   font-size: 25px;
   color: #666699;
-  padding: -20px 0 20px 0;
-  margin: 0;
   transition: 1s ease;2
 }
+
 .subtitle:hover {
   color: #29293d;
-}
-h5 {
-  font-family: 'airplane';
-  font-size: 75px;
-  color: #bf5700;
-  text-transform: lowercase;
 }
 
 small {
@@ -144,28 +155,25 @@ small {
   margin: 25px 0 0 20px;
   text-transform: lowercase;
 }
-/*a {
-  font-family: 'airplane';
-  font-size: 15px;
-  color: darkslategrey;
-  text-transform: lowercase;
-}*/
 
 alert {
   font-family: 'Hardware';
   font-size: 15px;
   color: darkslateblue;
 }
+
 span {
   font-family: 'Dude';
   font-size: 15px;
   color: darkslateblue;
   margin: 25px 0 0 15px;
 }
+
 a:visited {
   text-decoration: none;
   text-decoration-color: #33334d;
 }
+
 li {
   display: inline-block;
   padding: 0;
@@ -174,43 +182,39 @@ li {
   font-size: 18px;
   color: darkslategrey;
 }
+
 li:hover {
   color: black;
 }
+
 .titleNav {
   font-family: 'Dude';
   font-size: 25px;
   font-weight: bold;
   color: black;
 }
+
 .buttonList {
   margin: 0;
   padding: 0;
 }
+
 ul {
   padding: 0;
   margin: 0;
 }
 
-.ProfPic{
-  height:50px; 
-  width:50px; 
-  float:left; 
-  padding-right: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
 .media-content {
   display:flex;
   align-items:center;
   justify-content:center;
 }
 
-
 .left-body {
   grid-row: 2;
   grid-column: 2/4;
 }
+
 .right-body {
   grid-row: 2;
   grid-column: 4;
@@ -222,12 +226,7 @@ ul {
   align-items:center;
   justify-content:center; */
 }
-img {
-  max-width: 100%;
-  min-width: 101%;
-  /* max-height: 100%; */
-  object-fit: contain;
-}
+
 .button{
   border:0.1em solid #FFFFFF;
   border-radius: 5px;
@@ -250,20 +249,19 @@ img {
   -webkit-transition: all 1s ease;
   white-space: nowrap;
 }
+
 button:hover{
   color: white;
   background: rgba(0,0,0,0.9);
   border-radius: 5px;
 }
-a {
-  text-decoration: none;
-  color: grey;
-}
+
 .theForm {
   font-family: 'Hardware';
   font-size: 15px;
   color: white;
 }
+
 .navBar {
   border: 1px solid darkGray;
   transition: 0.9s ease;
@@ -275,30 +273,35 @@ a {
 }
 
 .navBar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .navBar a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
 /* Add a color to the active/current link */
 .navBar a.active {
-    background-color: #4CAF50;
-    color: blue;
+  background-color: #4CAF50;
+  color: blue;
+}
+
+.center{
+  text-align: center;
 }
 
 .start .danger h3{
   position: relative;
   top: -120px;
 }
+
 .start h1{
   position: relative;
   top: -265px;
@@ -310,13 +313,12 @@ a {
   left: 135px;
   height: 350px;
   width: 450px;
-
 }
+
 .startAnim img{
   position: absolute;
   height: 100%;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 #input_box{
@@ -325,14 +327,7 @@ a {
   border-bottom: 1px solid black;
   padding: 0px 0 0px 0;
   width: 100px;
-
 }
-
-.center{
-  text-align: center;
-
-}
-
 
 input {
   border: black;
@@ -344,12 +339,15 @@ input {
   font-size: 20px;
   font-family: 'Hardware';
 }
+
 input:focus {
   outline: none;
 }
+
 *:focus {
   outline: none;
 }
+
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; }
 input:focus::-moz-placeholder { color:transparent; }
