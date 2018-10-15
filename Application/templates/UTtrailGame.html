@@ -14,11 +14,14 @@
 			<br><br>
 		{% endif %}
 	{% endfor %}
-	<div class="theForm" id="input_box">
+	<div class="theForm">
 		<form method="POST" action="/game">
 			{{ form.hidden_tag() }}
-				<div class="form-group"></div>
-					{{ form.ans }}
+			{{ form.label }}
+				<div class="form-group">
+				<h2>What is your choice? {{ form.ans( id="input_box") }}</h2>
+				</div>
+
 		</form>
 	</div>
 	</h2>

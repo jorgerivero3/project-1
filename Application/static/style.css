@@ -262,7 +262,7 @@ a {
 .theForm {
   font-family: 'Hardware';
   font-size: 15px;
-  color: darkslategrey;
+  color: white;
 }
 .navBar {
   border: 1px solid darkGray;
@@ -319,10 +319,18 @@ a {
   
 }
 
+#input_box{
+  color: white;
+  font-size: 40px;
+  border-bottom: 1px solid black;
+  padding: 0px 0 0px 0;
+  width: 100px;
+
+}
 
 
 input {
-  border: none;
+  border: black;
   border-bottom: 2px solid darkGray;
   transition: 0.9s ease;
   width: 260px;
