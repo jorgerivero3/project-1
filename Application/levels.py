@@ -51,7 +51,6 @@ a9 = ["a9", ["You instantly regret going to class since you would have made a 0 
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "1. Continue"], [['+10e']], ['b1']] 
 
-<<<<<<< HEAD
 b1 = ['b1', ["While hanging out after class, one of friends comes up to youy and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
 However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b1']]
 
@@ -118,12 +117,17 @@ d10 = ["d10", ["That's right, Gameday. That great tribal ritual that all Longhor
 first time since 2011, when we won on that last second field goal (suck it, Aggies). You must prepare for this great event", "Need some new burnt orange apparel!", "Contact friends for tailgating"], 
 [["+10e"], "+15e"], ["e1", "e2"]]
 
-e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide "]]
+e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide on the classic: polo shirt and shorts with some burnt orange dock shoes.", "It's time"], 
+["+5e"], ["e2"]]
+
+e2 = ["e2", ["You text the gm and start coming up with ideas. You're assigned the important task of getting the beer. What brand do you decide to buy?", "ShinerBock", "Corona", "Land Shark", "The one and only LoneStar"], 
+[], ["e3", "e3", "e3", "e3"]]
+
+e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it, and now you're ready for tomorrow. you head home locked in and ready to go. Those Aggies won't know what hit them.", "Hook 'em"], 
+["+40e"], ["gg"]]
+
 levels = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, c1, c2,
-d1, d2, d3, d4, d5, d6, d7, d8, d9, d10]
-=======
-levelNames = [a1, a2, a3, a4, a5, a6, a7, a8, a9]
->>>>>>> 177add1fea463ae745a516b3328270b0e9fa7ed2
+d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, e1, e2, e3, gg]
 
 #Builds the Level objects with the scripts above
 for script in levelNames:
