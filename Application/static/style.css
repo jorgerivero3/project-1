@@ -68,6 +68,15 @@ body#game {
   background-size: cover;
   overflow-x: hidden;
 }
+img#imagePlaceholder{
+  position: relative;
+  float: left;
+  top: 25px;
+  left: 25%;
+  height: 350px;
+  width: 500px;
+  border: 1px solid black;
+}
 
 h1 {
   font-family: 'Dude';
