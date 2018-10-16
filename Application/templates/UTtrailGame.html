@@ -3,7 +3,7 @@
 
 <body id="game">
 <div style="text-align: left; position: absolute; bottom: 0; padding: 0 5% 0 0;">
-	<h2 style = "margin: 0 0 0 0">
+	<p style = "margin: 0 0 0 0">
 	{% for i in range(prompts|length) %}
 		{% if i == 1 %}
 			{% for options in prompts[i] %}
@@ -19,12 +19,12 @@
 			{{ form.hidden_tag() }}
 			{{ form.label }}
 				<div class="form-group">
-				<h2 style="margin: 0; padding: 5% 0 0 0">What is your choice? {{ form.ans( id="input_box") }}</h2>
+				<p style="margin: 0; padding: 2% 0 0 0; font-size: 30px">What is your choice? {{ form.ans( id="input_box") }}</p>
 				</div>
 
 		</form>
 	</div>
-	</h2>
+	</p>
 </div>
 </body>
 
