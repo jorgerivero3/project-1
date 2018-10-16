@@ -57,7 +57,7 @@ b1 = ['b1', ["While hanging out after class, one of friends comes up to youy and
 However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b2']]
 
 a10 = ["a10", ["While a party sounds fun, you just want to be able to sleep soundly and relax peacefully that night. After some hours of studying, watching netflix, and eating dinner, you fall asleep peacefully \
-(not) ready for the day tomorrow", "Continue to next day"], ['+40e'], ['d1']]
+(not) ready for the day tomorrow", "1. Continue to next day"], ['+40e'], ['d1']]
 
 
 # Originally no character effects here, code not yet written to handle situations without effects. Temp added one. -Jorge
@@ -68,66 +68,66 @@ b3 = ["b3", ["You show up right at 10:00, in fact you are even a little early be
 that no one has arrived yet and it would probably be best to wait a little while.", "Should have just waited smh"], ["+1e"], ["b4"]]
 
 b4 = ["b4", ["You show up at 10:45 to a modest queue outside the fence. After some waiting, you get to the front table. '$40 please'. 'What,' you think to youself, 'That's bullsh*t.' \
-What will you do in this scenario?", "Whatever, I'm here, I'll just pay the $40.", "This is crap. I'm getting in no matter what!", "Price is WAAAYYY to high. I'm going home."], [["+5e"], ["-15e"], ["+5e"]], ["b5", "b6", "b7"]]
+What will you do in this scenario?", "1. Whatever, I'm here, I'll just pay the $40.", "2. This is crap. I'm getting in no matter what!", "3. Price is WAAAYYY to high. I'm going home."], [["+5e"], ["-15e"], ["+5e"]], ["b5", "b6", "b7"]]
 
-b5 = ["b5", ["After some grumbling, you cough up $40 cash, get a wristband, and walk in. Now that you're here, it is time for a night of (possible) debauchery", "Continue"], ["+5e"], ["b8"]]
+b5 = ["b5", ["After some grumbling, you cough up $40 cash, get a wristband, and walk in. Now that you're here, it is time for a night of (possible) debauchery", "1. Continue"], ["+5e"], ["b8"]]
 
 b6 = ["b6", ["You're not gonna pay that fee, so you just start walking in. Unfortunately, after taking 2 steps, a bunch of frat bros surround you and start beating the crap out of you \
-When they think you've had enough, they (literally) throw you out. Battered and bruised physically and mentally, you walk home, and cry yourself to sleep", "Life sucks"], ["+1e"], ["d1"]]
+When they think you've had enough, they (literally) throw you out. Battered and bruised physically and mentally, you walk home, and cry yourself to sleep", "1. Life sucks"], ["+1e"], ["d1"]]
 
 b7 = ["b7", ["This party probably isn't even worth $20, let alone $40. You decide to head home and get a good night's sleep \
-while reminiscing about how lonely you are", "Party's are for losers anyway"], ["+10e"], ["d1"]]
+while reminiscing about how lonely you are", "1. Party's are for losers anyway"], ["+10e"], ["d1"]]
 
 b8 = ["b8", ["As you walk in, you see some different poisons for you to sample. Do you start out light or go all the way", 
-"Let's just get a beer", "Punch sounds pretty good", "Give me a shot, let's go"], [["-2e"], ["-4e"], "-6e"], ["b9", "b10", "c1"]]
+"1. Let's just get a beer", "2. Punch sounds pretty good", "3. Give me a shot, let's go"], [["-2e"], ["-4e"], "-6e"], ["b9", "b10", "c1"]]
 
 b9 = ["b9", ["You start off slow with a beer (more like 3), and you enjoy the night. You talk to some friends you spot, dance a little, \
-and have fun. Its time for another drink. What now", "More beer!", "Let's get punch-y", "SHOTS!"], [["-2e"], ["-4e"], "-6e"], ["b10", "c1", "c2"]]
+and have fun. Its time for another drink. What now", "1. More beer!", "2. Let's get punch-y", "3. SHOTS!"], [["-2e"], ["-4e"], "-6e"], ["b10", "c1", "c2"]]
 
 b10 = ["b10", ["You really start to feel the effects. The night becomes a little blurry, and your friends look fuzzy, \
-but that's not slowing you down. You want more", "SHOTS", "SHOTS", "SHOTS"], [["-6e"], ["-6e"], "-6e"], ["c3", "c3", "c3"]]
+but that's not slowing you down. You want more", "1. SHOTS", "2. SHOTS", "3. SHOTS"], [["-6e"], ["-6e"], "-6e"], ["c3", "c3", "c3"]]
 
 c1 = ["c1", ["Oh man, you're really feeling it now. You start sseemingly teleporting around as you have no remebrance of moving. \
-What was in that punch? Did I even drink punch? Oh well, might as well have shots", "No choices, take some shots"], ["-6e"], ["c2"]]
+What was in that punch? Did I even drink punch? Oh well, might as well have shots", "1. No choices, take some shots"], ["-6e"], ["c2"]]
 
 c2 = ["c2", ["You are now gone. The night passes with lots of blackness. You remember throwing up in a corner, \
 your friends ordering you an Uber, you riding (and throwing up again) in the uber before being kicked out, \
-somehow making back to your apartment and your bed, before passing out into the night", "Worth it"], ["+20e"], ["d1"]]
+somehow making back to your apartment and your bed, before passing out into the night", "1. Worth it"], ["+20e"], ["d1"]]
 
 d1 = ["d1", ["You wake up the next day feeling (perhaps surprisingly) well. Unfortunately you overslept your first class. Now that you're up, might as well get up, right?",
-"Let's get this bread", "Not really feeling it"], ["+10e", "+15e"], ["d2", "d3"]]
+"1. Let's get this bread", "2. Not really feeling it"], ["+10e", "+15e"], ["d2", "d3"]]
 
-d2 = ["d2", ["You get up, brush your teeth, get dressed, and head out for the day. What should you do at campus", "Study", "Watch Netflix", "Homework"], 
+d2 = ["d2", ["You get up, brush your teeth, get dressed, and head out for the day. What should you do at campus", "1. Study", "2. Watch Netflix", "3. Homework"], 
 [["+3e"], ["+4e"], ["+3e"]], ["d4", "d5", "d6"]]
 
 d3 = ["d3", ["You decide to do nothing today, and pretty much laze around, binging The Office on Netflix and eating some snacks. Eventually you go to sleep later that night (yeah that's the end)", 
-"Continue"], ["+10e"], ["g1"]]
+"1. Continue"], ["+10e"], ["g1"]]
 
 d4 = ["d4", ["You study for a little while, then get bored and watch Netflix instead. Why can't you ever focus?", "1. Continue"], ["+5e"], ["d5"]]
 
 d5 = ["d5", ["You start watching Netflix as watching it on campus just feels better. Maybe you like the feeling that \
-because you're on campus, you're actually doing something productive, no matter what it is.", "Whatever, it's Friday"], [["+1e"]], ["d7"]]
+because you're on campus, you're actually doing something productive, no matter what it is.", "1. Whatever, it's Friday"], [["+1e"]], ["d7"]]
 
-d6 = ["d6", ["You start on your homework and after an hour, you finish it. You decide to celebrate and relax by watching Netflix", "Do all roads just lead to Netflix?"], 
+d6 = ["d6", ["You start on your homework and after an hour, you finish it. You decide to celebrate and relax by watching Netflix", "1. Do all roads just lead to Netflix?"], 
 ["+6e"], ["d5"]]
 
-d7 = ["d7", ["After really doing nothing for a little bit, you remember taht tomorrow is that day. Yes that day", "Gameday", "Soup day", "Saturday"], [], ["d10", "d8", "d9"]]
+d7 = ["d7", ["After really doing nothing for a little bit, you remember that tomorrow is that day. Yes that day", "1. Gameday", "2. Soup day", "3. Saturday"], [], ["d10", "d8", "d9"]]
 
-d8 = ["d8", ["Wait, what? I don't even think that's a real day", "Saturday", "Gameday"], [], ["d9", "d10"]]
+d8 = ["d8", ["Wait, what? I don't even think that's a real day", "1. Saturday", "2. Gameday"], [], ["d9", "d10"]]
 
-d9 = ["d9", ["Yes it is Saturday, but there's more too it than that", "Gameday", "Soup day"], [], ["d10", "d8"]]
+d9 = ["d9", ["Yes it is Saturday, but there's more too it than that", "1. Gameday", "2. Soup day"], [], ["d10", "d8"]]
 
 d10 = ["d10", ["That's right, Gameday. That great tribal ritual that all Longhorn fans participate in. This one is special as UT will be playing A&M for the \
-first time since 2011, when we won on that last second field goal (suck it, Aggies). You must prepare for this great event", "Need some new burnt orange apparel!", "Contact friends for tailgating"], 
+first time since 2011, when we won on that last second field goal (suck it, Aggies). You must prepare for this great event", "1. Need some new burnt orange apparel!", "2. Contact friends for tailgating"], 
 [["+10e"], "+15e"], ["e1", "e2"]]
 
-e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide on the classic: polo shirt and shorts with some burnt orange dock shoes.", "It's time"], 
+e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide on the classic: polo shirt and shorts with some burnt orange dock shoes.", "1. It's time"], 
 ["+5e"], ["e2"]]
 
-e2 = ["e2", ["You text the gm and start coming up with ideas. You're assigned the important task of getting the beer. What brand do you decide to buy?", "ShinerBock", "Corona", "Land Shark", "The one and only LoneStar"], 
+e2 = ["e2", ["You text the gm and start coming up with ideas. You're assigned the important task of getting the beer. What brand do you decide to buy?", "1. ShinerBock", "2. Corona", "3. Land Shark", "4. The one and only LoneStar"], 
 [], ["e3", "e3", "e3", "e3"]]
 
-e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it, and now you're ready for tomorrow. you head home locked in and ready to go. Those Aggies won't know what hit them.", "Hook 'em"], 
+e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it, and now you're ready for tomorrow. you head home locked in and ready to go. Those Aggies won't know what hit them.", "1. Hook 'em"], 
 ["+40e"], ["cs"]]
 
 
