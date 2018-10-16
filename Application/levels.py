@@ -62,7 +62,7 @@ a10 = ["a10", ["While a party sounds fun, you just want to be able to sleep soun
 
 # Originally no character effects here, code not yet written to handle situations without effects. Temp added one. -Jorge
 b2 = ['b2', ["After grueling through the whole day, you figure you deserve some time to have fun. After getting the address and start time, you head home and get ready. Now, what time should \
-you arrive at the party?", "1. 10:00, right on start time", "10:45, late enough but still early"], [], ["b3", "b4"]]
+you arrive at the party?", "1. 10:00, right on start time", "2. 10:45, late enough but still early"], [], ["b3", "b4"]]
 
 b3 = ["b3", ["You show up right at 10:00, in fact you are even a little early because you wish to show respect to your hosts. As you approach the gate, one of the confused memebrs informs you \
 that no one has arrived yet and it would probably be best to wait a little while.", "Should have just waited smh"], ["+1e"], ["b4"]]
