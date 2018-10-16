@@ -2,37 +2,50 @@
 {% block content %}
 
 <div>
-Game over idk
-</div>
-<div>
-{% if current_user.energy <= 0 %}
-	Unfortunately, you didn't make it through the week alive.<br>
-{% elif current_user.energy <= 50 %}
-	You made it through the week, but barely. <br>
-{% else %}
-	Congrats, you made it through the week alive.<br>
-{% endif %}
+	<h1 style = "text-align: center">
+		Game over idk
+	</h1>
 </div>
 
 <div>
-Your stats:<br>
-{% if current_user.grades < 70 %}
-	GPA: 0.0<br>
-{% elif current_user.grades < 80 %}
-	GPA: 1.0<br>
-{% elif current_user.grades < 90 %}
-	GPA: 3.0<br>
-{% else %}
-	GPA: 4.0<br>
-{% end if}
-{% if current_user.sanity < 70}
-	Sanity: Non-existant
-{% elif current_user.sanity < 85}
-	Sanity: About to snap
-{% else %}
-	Sanity: This is fine.
-</div>
+	<h2 style = "text-align: center; margin: 0">
+		{% if current_user.energy <= 0 %}
+			Unfortunately, you didn't make it through the week alive.
+		{% elif current_user.energy <= 50 %}
+			You made it through the week, but barely.
+		{% else %}
+			Congrats, you made it through the week alive.
+		{% endif %}
+			<br><br>
+	</h2>
 
-<a href="{{ url_for('reset_game') }}"><input type=”button” value=”reset_game”></a>
+	<p style = "text-align: center; margin: 0">
+		Your stats:<br>
+
+		Energy: {{ current_user.energy }} <br>
+
+		{% if current_user.grades < 70 %}
+			GPA: 0.0<br>
+		{% elif current_user.grades < 80 %}
+			GPA: 1.0<br>
+		{% elif current_user.grades < 90 %}
+			GPA: 3.0<br>
+		{% else %}
+			GPA: 4.0<br>
+		{% endif %}
+
+		{% if current_user.sanity < 70 %}
+			Sanity: Non-existant
+		{% elif current_user.sanity < 85 %}
+			Sanity: About to snap
+		{% else %}
+			Sanity: This is fine.
+		{% endif %}
+	</p>
+</div>
+<br><br>
+<div class='buttonList' style="text-align: center">
+            <form method ="get" action = "/reset_game"><button class ='button'>Start Over</button></form>
+</div>
 
 {% endblock %}

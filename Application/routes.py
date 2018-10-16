@@ -175,12 +175,11 @@ def doEffect(current_user, array):
 
 @application.route('/gameover')
 @login_required
-def gameover(): # will need to make a button
+def gameover():
 	return render_template('gameover.html')
 
 @application.route('/coming_soon', methods=['GET', 'POST'])
 def coming_soon():
-
 	return render_template('coming_soon.html')
 
 @application.route('/reset_game')
@@ -190,12 +189,5 @@ def reset_game():
 	current_user.grade = 100
 	current_user.sanity = 100
 	db.session.commit()
-	return redirect(url_for('game'))
-
-
-
-	
-
-
-def reset_game():
-	current_user.progress = 'a1'
+	flash('You have started over.', 'success')
+	return redirect(url_for('home'))
