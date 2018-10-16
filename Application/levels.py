@@ -32,7 +32,7 @@ a2 = ["a2", ["After some self-motivational pep talks, you groggly stumble out of
 After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s','-10e']], ['a3']]
 
 a3 = ["a3", ["After enduring the most fun-filled, totally-not-boring class ever, you manage to make it and are free. Now comes one of the most important decisions of your life so far - lunch. \
-Where and what will you eat on this fine day?", "1. Ramen", "2. Don's", "3. CFA", "4. Chic-Fil-A"], [['+2e'],['+5e'],['+5e'],['+7e']], ['a4','a4','a4', 'a4']]
+Where and what will you eat on this fine day?", "1. Ramen", "2. Don's", "3. Jester Sushi", "4. Chic-Fil-A"], [['+2e'],['+5e'],['+5e'],['+7e']], ['a4','a4','a4', 'a4']]
 
 a4 = ["a4", ["Following lunch, since you're such a good student, you go to your other class today. However, as you sit down, the teacher says those dreaded \
 words: 'Ok, class, put everything away and get out a pen or pencil.' Oh no, a quiz. You didn't study, you had no idea this was coming, and you're probably screwed. \
