@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
 	email = db.Column(db.String(120), unique=True, nullable=False)
 	password = db.Column(db.String(60), nullable=False)
 	#character/game details not changeable by user
-	health = db.Column(db.Integer, nullable=False, default=100)
+	energy = db.Column(db.Integer, nullable=False, default=100)
 	sanity = db.Column(db.Integer, nullable=False, default=100)
 	grades = db.Column(db.Integer, nullable=False, default=100)
 	progress = db.Column(db.String(2), nullable=False, default='a1')
@@ -31,7 +31,7 @@ class User(db.Model, UserMixin):
 		return User.query.get(user_id)
 
 	def is_dead(self):
-		return self.health <= 0
+		return self.energy <= 0
 
 	def __repr__(self):
-		return f"User('{self.username}', '{self.health}', '{self.sanity}', '{self.grades}')"
+		return f"User('{self.username}','{self.progress}', '{self.energy}', '{self.sanity}', '{self.grades}')"

@@ -5,9 +5,9 @@
 Game over idk
 </div>
 <div>
-{% if current_user.health <= 0 %}
+{% if current_user.energy <= 0 %}
 	Unfortunately, you didn't make it through the week alive.<br>
-{% elif current_user.health <= 50 %}
+{% elif current_user.energy <= 50 %}
 	You made it through the week, but barely. <br>
 {% else %}
 	Congrats, you made it through the week alive.<br>
@@ -32,4 +32,7 @@ Your stats:<br>
 {% else %}
 	Sanity: This is fine.
 </div>
+
+<a href="{{ url_for('reset_game') }}"><input type=”button” value=”reset_game”></a>
+
 {% endblock %}

@@ -9,7 +9,7 @@
 <div>
 	<h2 style= "text-align: center; margin-top: 13%">Your Current Status:</h2><br>
 	<p style="text-align: center">
-		Health: {{ current_user.grades }} <br>
+		Energy: {{ current_user.energy }} <br>
 		{% if current_user.grades < 70 %}
 			GPA: 0.0<br>
 		{% elif current_user.grades < 80 %}
@@ -28,5 +28,6 @@
 			Sanity: Everything is fine... for now.
 		{% endif %}
 </div>
+<a href="{{ url_for('reset_game') }}"><input type=”button” value=”reset_game”></a>
  
 {% endblock %}

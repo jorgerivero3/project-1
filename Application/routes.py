@@ -120,6 +120,7 @@ def game():
 	if current_user.progress == 'gg':
 		return redirect(url_for('gameover'))
 	elif current_user.progress == 'cs':
+		print("lol")
 		return redirect(url_for('coming_soon'))
 	else:
 		pageDetails = get_level(current_user.progress)
@@ -147,11 +148,11 @@ def doEffect(current_user, array):
 		if string == '':
 			return
 		else:
-			if string[-1] == 'h':
+			if string[-1] == 'e':
 				if string[0] == '+':
-					current_user.health = current_user.health + int(string[1:-1])
+					current_user.energy = current_user.energy + int(string[1:-1])
 				else:
-					current_user.health = current_user.health - int(string[1:-1])
+					current_user.energy = current_user.energy - int(string[1:-1])
 			elif string[-1] == 's':
 				if string[0] == '+':
 					current_user.sanity = current_user.sanity + int(string[1:-1])
@@ -163,8 +164,8 @@ def doEffect(current_user, array):
 				else:
 					current_user.grades = current_user.grades - int(string[1:-1])
 
-			if current_user.health > 100:
-				current_user.health = 100
+			if current_user.energy > 100:
+				current_user.energy = 100
 			if current_user.sanity > 100:
 				current_user.sanity = 100
 			if current_user.grades > 100:
@@ -178,10 +179,18 @@ def gameover(): # will need to make a button
 	return render_template('gameover.html')
 
 @application.route('/coming_soon', methods=['GET', 'POST'])
-
 def coming_soon():
 
 	return render_template('coming_soon.html')
+
+@application.route('/reset_game')
+def reset_game():
+	current_user.progress = 'a1'
+	current_user.energy = 100
+	current_user.grade = 100
+	current_user.sanity = 100
+	db.session.commit()
+	return redirect(url_for('game'))
 
 
 
