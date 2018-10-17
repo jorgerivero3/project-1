@@ -38,30 +38,77 @@ body {
 body#home {
   height: 95vh;
   width: 99vw;
-  background: url(./Backgrounds/walkScene.gif), url(./Backgrounds/UTTower.png), url(./Backgrounds/FlagAnim.gif), url(./Backgrounds/sky.png) no-repeat center center fixed;
+  background: 
+  url(./Backgrounds/walkScene.gif),
+   url(./Backgrounds/UTTower.png), 
+   url(./Backgrounds/FlagAnim.gif), 
+   url(./Backgrounds/sky.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 105% 105%;
+  /* background-size: 105% 105%; */
   background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  background-size: 
+  contain,
+  contain,
+  contain,
+  cover;
 }
 
 body#about {
   height: 95vh;
   width: 99vw;
-  background: url(./Backgrounds/16.jpg) no-repeat center center fixed;
+  background: 
+  url(./Backgrounds/walkScene.gif),
+   url(./Backgrounds/UTTower.png), 
+   url(./Backgrounds/FlagAnim.gif), 
+   url(./Backgrounds/sky.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  /* background-size: 105% 105%; */
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow-x: hidden;
+  background-size: 
+  contain,
+  contain,
+  contain,
+  cover;
+}
+body#account {
+  background: 
+  url(./Backgrounds/walkScene.gif),
+   url(./Backgrounds/UTTower.png), 
+   url(./Backgrounds/FlagAnim.gif), 
+   url(./Backgrounds/sky.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* background-size: 105% 105%; */
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-size: 
+  contain,
+  contain,
+  contain,
+  cover;
 }
 
+body#account img {
+  opacity: 0.6;
+}
 body#game {
   height: 95vh;
   width: 99vw;
-  background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
+  /* background: url(./Backgrounds/70.jpg) no-repeat center center fixed;  */
+  background: url(./Backgrounds/sky.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -78,8 +125,13 @@ img#imagePlaceholder{
   border: 1px solid black;
 }
 
+.about-hover {
+  color: black;
+  margin: 0;
+  padding: 0;
+}
 .about-hover:hover {
-  color: white;
+  color: darkred;
 }
 
 h1 {
@@ -123,7 +175,7 @@ h5 {
 h6 {
   font-family: 'Hardware';
   font-size: 15px;
-  color: white;
+  color: black;
   padding: 0 200px;
 }
 
@@ -138,7 +190,9 @@ p {
   font-family: 'Hardware';
   font-size: 20px;
   color: darkslateblue;
-  margin: 0 0 0 27.5px;
+  /* margin: 0 0 0 27.5px; */
+  margin: 0;
+  padding: 0;
   z-index: 1000;
 }
 
@@ -146,6 +200,8 @@ a {
   transition: 1s ease;
   text-decoration: none;
   color: grey;
+  margin: 0;
+  padding: 0;
 }
 
 a:hover {
