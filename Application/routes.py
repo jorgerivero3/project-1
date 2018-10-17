@@ -6,7 +6,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 import os
 from Application.levels import master
 from flask_mail import Message
-
+import sys
 
 @application.route('/')
 def home():
@@ -138,7 +138,9 @@ def game():
 
 			db.session.commit()
 			return redirect(url_for('game'))
-	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts])
+	sys.stderr.write("HERE")
+	sys.stderr.write(pageDetails.image)
+	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts], art=pageDetails.image)
 
 def get_level(progress):
 	return master[progress]

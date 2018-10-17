@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "my-env/bin/python",
+    "python.linting.enabled": false
+}

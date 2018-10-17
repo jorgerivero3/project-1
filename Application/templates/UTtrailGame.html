@@ -2,7 +2,12 @@
 {% block content %}
 
 <body id="game">
-<img id="imagePlaceholder" src="" alt="">
+<!-- <img id="imagePlaceholder" src="{{url_for('static', filename='netflix.png')}}" alt=""> -->
+	
+	<!-- <img src="static/{{ art }}" alt="image.png" width="350" height="350" /> -->
+	<img src="{{url_for('static', filename=art)}}" alt="image.png" width="350" height="350" />
+	<br><br>
+
 <div style="text-align: left; position: absolute; bottom: 0; padding: 0 5% 0 0;">
 	<p style = "margin: 0 0 0 0">
 	{% for i in range(prompts|length) %}
