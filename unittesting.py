@@ -12,7 +12,7 @@ class functiontesting(unittest.TestCase):
 	def test_effects(self): #testing function from routes
 		current_user = User() #create object
 		#initialize stats
-		current_user.health = 100
+		current_user.energy = 100
 		current_user.sanity = 100
 		current_user.grades = 100
 		#progress/choice
@@ -34,9 +34,13 @@ class functiontesting(unittest.TestCase):
 		current_user.progress = pageDetails.get_next_level(index)
 		self.assertEqual(current_user.progress, 'a2') #specific to choice
 
-	# NEEDS TO TEST THE WRONG STUFF
+	def test_wrong_input(self):
+		current_user = User() #create object
+		index = 4
+		current_user.progress = 'a1'
+		pageDetails = get_level(current_user.progress)
+		self.assertFalse(index in (range(1, pageDetails.num_choices() + 1)))
 
-	#def test_wrong_input
 
 if __name__ == '__main__':
 	unittest.main()
