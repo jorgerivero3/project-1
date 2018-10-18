@@ -2,13 +2,12 @@
 <html>
 <script src= "{{url_for('static', filename='script.js')}}"></script>
 	<head>
-		<!--  Meta  -->
 		<meta charset="UTF-8" />
-		<title>The UT Trail</title>
+		<title>Texas Trail</title>
 		<meta name="description" content="Survive the Week." />
-		<!--  Styles  -->
 		<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
-		<!-- Title -->
+		<link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" type="image/x-icon">
+		<link rel="icon" href="{{url_for('static', filename='favicon.ico')}} type="image/x-icon">
 		{% if title %}
 			<title>{{ title }}</title>
 		{% else %}
