@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-
+<body id="game">
 <div class="center">
 <h1>To be continued... </h1>
 <h1>More levels coming soon! </h1>
@@ -27,9 +27,11 @@
 		{% else %}
 			Sanity: Everything is fine... for now.
 		{% endif %}
+		</p>
 </div>
 <br><br>
 <div class='buttonList' style="text-align: center; padding: 0 0 5% 0">
             <form method ="get" action = "/reset_game"><button class ='button'>Start Over</button></form>
 </div>
+</body>
 {% endblock %}

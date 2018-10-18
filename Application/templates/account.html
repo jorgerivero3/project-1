@@ -8,7 +8,14 @@
       <h1>Your Account</h1>
 
       <h2 style= "margin: 5% 0 0 0">
-        Progress: {{ current_user.progress }}
+        Progress: 
+        {% if current_user.progress[0] == 'a' or current_user.progress[0] == 'b' or current_user.progress[0] == 'c'%}
+          Thursday
+        {% elif current_user.progress[0] == 'd' or current_user.progress[0] == 'e'%}
+          Friday
+        {% else %}
+          Saturday
+        {% endif %}
         <br>
         Status:<br>
         <p style="margin-left: 5%">

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-
+<body id="game">
 <div>
 	<h1 style = "text-align: center">
 		Game over idk
@@ -8,7 +8,7 @@
 </div>
 
 <div>
-	<h2 style = "text-align: center; margin: 0">
+	<h2 style = "text-align: center; margin: 0; color: darkslateblue;">
 		{% if current_user.energy <= 0 %}
 			Unfortunately, you didn't make it through the week alive.
 		{% elif current_user.energy <= 50 %}
@@ -47,5 +47,5 @@
 <div class='buttonList' style="text-align: center">
             <form method ="get" action = "/reset_game"><button class ='button'>Start Over</button></form>
 </div>
-
+</body>
 {% endblock %}
