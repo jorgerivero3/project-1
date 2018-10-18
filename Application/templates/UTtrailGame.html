@@ -3,7 +3,7 @@
 
 <body id="game">
 <!-- <img id="imagePlaceholder" src="{{url_for('static', filename='netflix.png')}}" alt=""> -->
-	
+	<p style="position: absolute; float: left;"><br>Your stats: <br> <br> Energy: {{current_user.energy}}<br>Sanity: {{current_user.sanity}}<br>Grades: {{current_user.grades}}</p>
 	<!-- <img src="static/{{ art }}" alt="image.png" width="350" height="350" /> -->
 	<p style="text-align:center;"><img src="{{url_for('static', filename=art)}}" alt="image.png" align="middle" height="350" /></p>
 	<br><br>
