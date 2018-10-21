@@ -18,7 +18,7 @@ class Level:
 master = {}
 
 
-DAYS = {"a": "Monday", "b": "Monday", "c": "Monday", "d":"Tuesday", "e": "Tuesday", "f": "Tuesday"}
+DAYS = {"a": "Monday", "b": "Monday", "c": "Monday", "d":"Tuesday", "e": "Tuesday", "f": "Tuesday", "g": "Saturday"}
 #monday a-c, tuesday d-e
 '''
 mondays = [a1,a2,a3,a4,a5,b5,a6,b6,c6,a7,a8,b8,a9]
@@ -54,7 +54,7 @@ a9 = ["a9", ["You instantly regret going to class since you would have made a 0 
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
 unlike them.", "1. Continue"], [['+10e']], ['b1'], 'in_class.png'] 
 
-b1 = ['b1', ["While hanging out after class, one of friends comes up to youy and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
+b1 = ['b1', ["While hanging out after class, one of your friends comes up to you and offers an most interesting proposal: there is a party tonight at a fraternity house, and you are invited. \
 However, you aren't really sure if you want to go: sleep and quiet sounds nice. What should you do?", "1. I'm good, quiet is the place to be", "2. Hell yeah, let's party"], [['+5e'], ['+15e']], ['a10', 'b2'], 'guy.png']
 
 a10 = ["a10", ["While a party sounds fun, you just want to be able to sleep soundly and relax peacefully that night. After some hours of studying, watching netflix, and eating dinner, you fall asleep peacefully \
@@ -129,11 +129,11 @@ e2 = ["e2", ["You text the gm and start coming up with ideas. You're assigned th
 [], ["e3", "e3", "e3", "e3"], 'cow.png']
 
 e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it, and now you're ready for tomorrow. you head home locked in and ready to go. Those Aggies won't know what hit them.", "1. Hook 'em"], 
-["+40e"], ["cs"], 'cow.png']
+["+40e"], ["e5"], 'cow.png']
 
 
 e4 = ["e4", ["You head to the game ready to cheer your heart out and drink lots of yeasty beer. Your seats are for the student section but you see a few empty seats at the 50, do you sneak over?", "1. Yes, I am a devious" , "2. No, I follow rules"], 
-[], ["e5","cs2"], 'cow.png']
+[], ["e5","f5"], 'cow.png']
 
 e5 = ["e5", ["Nice, got the best seats in the HOUSE. One problem though ... the seat owners just came back with nachos ...", "1. Greet them warmly" , "2. Act invisible"], 
 [], ["e7","e8"], 'cow.png']
@@ -149,6 +149,9 @@ e7 = ["e7", ["The seat owners are slightly swhasty and welcome you kindly! They 
 
 e9 = ["e9", ["The score of the game is raging back and forth until eventually the end of the game nears", "1. Continue"], 
 [], ["f1"], 'cow.png']
+
+f5 = ["f5", ["You stay in your seat and the ball is kicked off! The rivalry begins again!", "1. Continue"], 
+[], ["e9"], 'cow.png']
 
 f1 = ["f1", ["Texas is deep in the redzone and has one play to win the game. If you were the coach what would you call?", "1. Blue 42?" , "2. Omaha?" , "3.Goal line fade to Johnson" , "4.QB Sneak"], 
 [], ["f2","f2","f3","f4"], 'cow.png']
