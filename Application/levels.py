@@ -112,11 +112,11 @@ because you're on campus, you're actually doing something productive, no matter 
 d6 = ["d6", ["You start on your homework and after an hour, you finish it. You decide to celebrate and relax by watching Netflix", "1. Do all roads just lead to Netflix?"], 
 ["+6e"], ["d5"], 'netflix.png']
 
-d7 = ["d7", ["After really doing nothing for a little bit, you remember that tomorrow is that day. Yes that day", "1. Gameday", "2. Soup day", "3. Saturday"], [], ["d10", "d8", "d9"], 'netflix.png']
+d7 = ["d7", ["After really doing nothing for a little bit, you remember that tomorrow is that day. Yes that day", "1. Gameday", "2. Soup day", "3. Saturday"], [''], ["d10", "d8", "d9"], 'netflix.png']
 
-d8 = ["d8", ["Wait, what? I don't even think that's a real day", "1. Saturday", "2. Gameday"], [], ["d9", "d10"], 'netflix.png']
+d8 = ["d8", ["Wait, what? I don't even think that's a real day", "1. Saturday", "2. Gameday"], [''], ["d9", "d10"], 'netflix.png']
 
-d9 = ["d9", ["Yes it is Saturday, but there's more too it than that", "1. Gameday", "2. Soup day"], [], ["d10", "d8"], 'netflix.png']
+d9 = ["d9", ["Yes it is Saturday, but there's more too it than that", "1. Gameday", "2. Soup day"], [''], ["d10", "d8"], 'netflix.png']
 
 d10 = ["d10", ["That's right, Gameday. That great tribal ritual that all Longhorn fans participate in. This one is special as UT will be playing A&M for the \
 first time since 2011, when we won on that last second field goal (suck it, Aggies). You must prepare for this great event", "1. Need some new burnt orange apparel!", "2. Contact friends for tailgating"], 
@@ -133,46 +133,46 @@ e3 = ["e3", ["Good choice, you think to yourself. You buy plenty of cases of it,
 
 
 e4 = ["e4", ["You head to the game ready to cheer your heart out and drink lots of yeasty beer. Your seats are for the student section but you see a few empty seats at the 50, do you sneak over?", "1. Yes, I am a devious" , "2. No, I follow rules"], 
-[], ["e5","f5"], 'cow.png']
+[''], ["e5","f5"], 'cow.png']
 
 e5 = ["e5", ["Nice, got the best seats in the HOUSE. One problem though ... the seat owners just came back with nachos ...", "1. Greet them warmly" , "2. Act invisible"], 
-[], ["e7","e8"], 'cow.png']
+[''], ["e7","e8"], 'cow.png']
 
 e6 = ["e6", ["You remain in your seat knowing full well you will be standing the whole time ready to destroy your voice box", "1. Continue"], 
-[], ["e9"], 'cow.png']
+[''], ["e9"], 'cow.png']
 
 e8 = ["e8", ["The seat owners easilly see you considering you dont have the power to turn invisible ... you exhibit an embarrassed aura as you walk back to the student section", "1. Continue"], 
-[], ["e9"], 'cow.png']
+[''], ["e9"], 'cow.png']
 
 e7 = ["e7", ["The seat owners are slightly swhasty and welcome you kindly! They even share some nachos.", "1. Continue"], 
-[], ["e9"], 'cow.png']
+[''], ["e9"], 'cow.png']
 
 e9 = ["e9", ["The score of the game is raging back and forth until eventually the end of the game nears", "1. Continue"], 
-[], ["f1"], 'cow.png']
+[''], ["f1"], 'cow.png']
 
 f5 = ["f5", ["You stay in your seat and the ball is kicked off! The rivalry begins again!", "1. Continue"], 
-[], ["e9"], 'cow.png']
+[''], ["e9"], 'cow.png']
 
 f1 = ["f1", ["Texas is deep in the redzone and has one play to win the game. If you were the coach what would you call?", "1. Blue 42?" , "2. Omaha?" , "3.Goal line fade to Johnson" , "4.QB Sneak"], 
-[], ["f2","f2","f3","f4"], 'cow.png']
+[''], ["f2","f2","f3","f4"], 'cow.png']
 
 f2 = ["f2", ["No worries, Coach Hermann has it under control. They perform a triple reverse qb throw with fries", "1. Continue"], 
-[], ["f9"], 'cow.png']
+[''], ["f9"], 'cow.png']
 
 f3 = ["f3", ["You and coach Herman must be on the same wave length! The ball is snapped and Ehlinger launches the ball to the corner ... JOHNSON CATCHES IT!", "1. JFIOPEWHFIOPEWHIPFEJ!!!"], 
-[], ["f9"], 'cow.png']
+[''], ["f9"], 'cow.png']
 
 f4 = ["f4", ["Coach Herman must have you on the payroll because he called the exact same play! Ehlinger takes the snap and immediately lunges forward ... the the ball breaks the plane!", "1. WHOOOOfdshjhfiuef!!!"], 
-[], ["f9"], 'cow.png']
+[''], ["f9"], 'cow.png']
 
 f9 = ["f9", ["TEXAS WINS THE FOOTBALL GAME! TEXAS WINS THE FOOTBALL GAME", "1. Continue"], 
-[], ["g1"], 'cow.png']
+[''], ["g1"], 'cow.png']
 
 g1 = ["g1", ["The crowd erupts in cheer, you chest bump the closest 10 people. You can finally say it.", "1. Texas Football is back"], 
-[], ["g2"], 'cow.png']
+[''], ["g2"], 'cow.png']
 
 g2 = ["g2", ["The End. Thanks for playing", "1. No thank you!"], 
-[], ["g3"], 'cow.png']
+[''], ["gg"], 'cow.png']
 
 
 levels = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, c1, c2,
