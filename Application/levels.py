@@ -80,13 +80,13 @@ b7 = ["b7", ["This party probably isn't even worth $20, let alone $40. You decid
 while reminiscing about how lonely you are", "1. Parties are for losers anyway"], ["+10e"], ["d1"], 'frat.png']
 
 b8 = ["b8", ["As you walk in, you see some different poisons for you to sample. Do you start out light or go all the way", 
-"1. Let's just get a beer", "2. Punch sounds pretty good", "3. Give me a shot, let's go"], [["-2e"], ["-4e"], "-6e"], ["b9", "b10", "c1"], 'cup.png']
+"1. Let's just get a beer", "2. Punch sounds pretty good", "3. Give me a shot, let's go"], [['-2e'], ['-4e'], ['-6e']], ["b9", "b10", "c1"], 'cup.png']
 
 b9 = ["b9", ["You start off slow with a beer (more like 3), and you enjoy the night. You talk to some friends you spot, dance a little, \
-and have fun. Its time for another drink. What now", "1. More beer!", "2. Let's get punch-y", "3. SHOTS!"], [["-2e"], ["-4e"], "-6e"], ["b10", "c1", "c2"], 'cup.png']
+and have fun. Its time for another drink. What now", "1. More beer!", "2. Let's get punch-y", "3. SHOTS!"], [["-2e"], ["-4e"], ["-6e"]], ["b10", "c1", "c2"], 'cup.png']
 
 b10 = ["b10", ["You really start to feel the effects. The night becomes a little blurry, and your friends look fuzzy, \
-but that's not slowing you down. You want more", "1. SHOTS", "2. SHOTS", "3. SHOTS"], [["-6e"], ["-6e"], "-6e"], ["c3", "c3", "c3"], 'cup.png']
+but that's not slowing you down. You want more", "1. SHOTS", "2. SHOTS", "3. SHOTS"], [["-6e"], ["-6e"], ["-6e"]], ["c3", "c3", "c3"], 'cup.png']
 
 c1 = ["c1", ["Oh man, you're really feeling it now. You start sseemingly teleporting around as you have no remebrance of moving. \
 What was in that punch? Did I even drink punch? Oh well, might as well have shots", "1. No choices, take some shots"], ["-6e"], ["c2"], 'blurrycup.png']
@@ -96,7 +96,7 @@ your friends ordering you an Uber, you riding (and throwing up again) in the ube
 somehow making back to your apartment and your bed, before passing out into the night", "1. Worth it"], ["+20e"], ["d1"], 'blurrycup.png']
 
 d1 = ["d1", ["You wake up the next day feeling (perhaps surprisingly) well. Unfortunately you overslept your first class. Now that you're up, might as well get up, right?",
-"1. Let's get this bread", "2. Not really feeling it"], ["+10e", "+15e"], ["d2", "d3"], 'sleepy.gif']
+"1. Let's get this bread", "2. Not really feeling it"], [["+10e"], ["+15e"]], ["d2", "d3"], 'sleepy.gif']
 
 d2 = ["d2", ["You get up, brush your teeth, get dressed, and head out for the day. What should you do at campus", "1. Study", "2. Watch Netflix", "3. Homework"], 
 [["+3e"], ["+4e"], ["+3e"]], ["d4", "d5", "d6"], 'ques.png']
@@ -107,7 +107,7 @@ d3 = ["d3", ["You decide to do nothing today, and pretty much laze around, bingi
 d4 = ["d4", ["You study for a little while, then get bored and watch Netflix instead. Why can't you ever focus?", "1. Continue"], ["+5e"], ["d5"], 'netflix.png']
 
 d5 = ["d5", ["You start watching Netflix as watching it on campus just feels better. Maybe you like the feeling that \
-because you're on campus, you're actually doing something productive, no matter what it is.", "1. Whatever, it's Friday"], [["+1e"]], ["d7"], 'netflix.png']
+because you're on campus, you're actually doing something productive, no matter what it is.", "1. Whatever, it's Friday"], ["+1e"], ["d7"], 'netflix.png']
 
 d6 = ["d6", ["You start on your homework and after an hour, you finish it. You decide to celebrate and relax by watching Netflix", "1. Do all roads just lead to Netflix?"], 
 ["+6e"], ["d5"], 'netflix.png']
@@ -120,7 +120,7 @@ d9 = ["d9", ["Yes it is Saturday, but there's more too it than that", "1. Gameda
 
 d10 = ["d10", ["That's right, Gameday. That great tribal ritual that all Longhorn fans participate in. This one is special as UT will be playing A&M for the \
 first time since 2011, when we won on that last second field goal (suck it, Aggies). You must prepare for this great event", "1. Need some new burnt orange apparel!", "2. Contact friends for tailgating"], 
-[["+10e"], "+15e"], ["e1", "e2"], 'ques.png']
+[["+10e"], ["+15e"]], ["e1", "e2"], 'ques.png']
 
 e1 = ["e1", ["You head to the COOP to get some new burnt orange gear for gameday. After some perusing, you decide on the classic: polo shirt and shorts with some burnt orange dock shoes.", "1. It's time"], 
 ["+5e"], ["e2"], 'cow.png']
