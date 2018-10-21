@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<body id='account'>
-
   <div class='theGrid'>
     <div class='left-body'>
       <h1>Your Account</h1>
@@ -11,7 +9,7 @@
         Progress: 
         {% if current_user.progress[0] == 'a' or current_user.progress[0] == 'b' or current_user.progress[0] == 'c'%}
           Thursday
-        {% elif current_user.progress[0] == 'd' or current_user.progress[0] == 'e'%}
+        {% elif current_user.progress[0] == 'd' or current_user.progress[0] == 'e' or current_user.progress[0] == 'z'%}
           Friday
         {% else %}
           Saturday
@@ -33,13 +31,6 @@
         <!-- add routing stuff -->
       <h3>Change Account Info</h3>
 
-<!---  
-      <p>Character Name: </p><p id = "UpdateUsername">{{ current_user.username }}</p>
-      <button type="button" onclick="UpdateUsername()">Change Character Name</button>
-      <br><br>
-      <p>Email: </p><p id = "UpdateEmail">{{ current_user.email }}</p>
-      <button type="button" onclick="UpdateEmail()">Change Email</button>
-    --->  
       <form method="POST" action="" enctype="multipart/form-data" style= "font-family: Hardware; font-size: 15px">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -79,6 +70,6 @@
       </form>
     </div>
   </div>
-</body>
+
 
 {% endblock %}
