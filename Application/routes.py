@@ -125,7 +125,7 @@ def game():
 	else:
 		pageDetails = get_level(current_user.progress)
 		form = GameInput()
-		if form.validate_on_submit() and (int(form.ans.data) in range(1, pageDetails.num_choices() + 1)):
+		if form.validate_on_submit() and (form.ans.data in range(1, pageDetails.num_choices() + 1)):
 			index = int(form.ans.data) - 1 #arrays start at 0
 			if pageDetails.effects:
 				eff = pageDetails.effects[index]
@@ -138,6 +138,7 @@ def game():
 
 			db.session.commit()
 			return redirect(url_for('game'))
+
 	sys.stderr.write("HERE")
 	sys.stderr.write(pageDetails.image)
 	return render_template('UTtrailGame.html', title='hookem', form=form, prompts=[pageDetails.story, pageDetails.prompts], art=pageDetails.image)
