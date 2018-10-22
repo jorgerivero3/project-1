@@ -28,7 +28,7 @@ tuesdays = [d1,d2,d3,d4,d5,e5,d6,e6,d7,d8,e8,d9]
 
 # DAY 1
 a1 = ["a1", ["A sharp, loud sound awakens you from your peaceful slumber. 'Another day', you think to yourself. Laying in bed, it feels so comfy and nice. The bed might as well be cloud from heaven itself.\
-You think about just drifting off...about the sweet release of sleep.", "1. No, it's time for class", "2. Hit that snooze button"], [['-5s'], ['']], ['a2','a3'], 'sleepy.gif']
+You think about just drifting off...about the sweet release of sleep.", "1. No, it's time for class", "2. Hit that snooze button"], [['-5s'], ['-5g']], ['a2','a3'], 'sleepy.gif']
 
 a2 = ["a2", ["After some self-motivational pep talks, you groggly stumble out of bed, shower, and get dressed for another day at the greatest university in the world. \
 After praying, you get hit by a car crossing Guad (and once again making it across unscathed), you arrive to hel- I mean, class.", "1. Continue"], [['-2s','-10e']], ['a3'], 'guad.png']
