@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, NumberRange, ValidationError
 from Application.models import User
 from flask_login import current_user
@@ -61,4 +61,4 @@ class UpdateInfo(FlaskForm):
 				raise ValidationError('Email taken')
 				
 class GameInput(FlaskForm):
-	ans = StringField('Your Choice: ', validators=[DataRequired()])
+	ans = IntegerField('Your Choice: ', validators=[DataRequired(), NumberRange(min=1)])

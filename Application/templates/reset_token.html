@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
-	<div class = "theForm" style= "text-align: center">
+<body id=form">	
+    <div class = "theForm" style= "text-align: center">
 	<form method="POST" action ="">
 		{{ form.hidden_tag() }}
 
@@ -34,4 +35,6 @@
 			{{ form.submit(class="button") }}
 		</div>
 	</form>
+</div>
+</body>
 {% endblock content %}

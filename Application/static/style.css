@@ -24,10 +24,10 @@
   grid-template-rows: auto 600px auto;
 }
 
-body {
+body#form {
   height: 95vh;
   width: 99vw;
-  background: url(./Backgrounds/70.jpg) no-repeat center center fixed; 
+  background: url(./Backgrounds/board.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,7 +35,7 @@ body {
   overflow-x: hidden;
 }
 
-body#home {
+body {
   height: 95vh;
   width: 99vw;
   background: 
@@ -46,50 +46,6 @@ body#home {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  /* background-size: 105% 105%; */
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  background-size: 
-  contain,
-  contain,
-  contain,
-  cover;
-}
-
-body#about {
-  height: 95vh;
-  width: 99vw;
-  background: 
-  url(./Backgrounds/walkScene.gif),
-   url(./Backgrounds/UTTower.png), 
-   url(./Backgrounds/FlagAnim.gif), 
-   url(./Backgrounds/sky.png);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  /* background-size: 105% 105%; */
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  background-size: 
-  contain,
-  contain,
-  contain,
-  cover;
-}
-body#account {
-  background: 
-  url(./Backgrounds/walkScene.gif),
-   url(./Backgrounds/UTTower.png), 
-   url(./Backgrounds/FlagAnim.gif), 
-   url(./Backgrounds/sky.png);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  /* background-size: 105% 105%; */
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -107,7 +63,6 @@ body#account img {
 body#game {
   height: 95vh;
   width: 99vw;
-  /* background: url(./Backgrounds/70.jpg) no-repeat center center fixed;  */
   background: url(./Backgrounds/sky.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -175,7 +130,7 @@ h5 {
 h6 {
   font-family: 'Hardware';
   font-size: 15px;
-  color: black;
+  color: darkslateblue;
   padding: 0 200px;
 }
 
@@ -411,6 +366,7 @@ input {
   padding: 20px 0 20px 0;
   font-size: 20px;
   font-family: 'Hardware';
+  color: white;
 }
 
 input:focus {
