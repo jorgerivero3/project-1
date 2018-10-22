@@ -49,7 +49,7 @@ a6 = ["a6", ["'What are these questions', you think to yourself, as you move on 
 a7 = ["a7", ["2 more. Just answer 2 more questions and you're done. Next one: 'E'", "1. This isn't even a question", "2. What class am I even in", "3. Why am I doing this to myself", "4. E"], [['-2e'],['-2e'],['-2e'],['+4e']], ['a8','a8', 'a8', 'a8'], 'in_class.png']
 
 a8 = ["a8", ["Finally, the last question. What could it possibly be? 'Hewwo, what is thee sum of 2 + 2 OwO?'", 
-"1. I hate myself so much", "2. 4", "3. Rawr xD", "4. I am now suicidal. Thank you, quiz, for bringing back my depression"], [['-2e'],['-2e'],['+5e'],['-20e']], ['a9','a9', 'a9', 'a9'], 'in_class.png']
+"1. I hate myself so much", "2. 4", "3. Rawr xD", "4. Thank you, quiz, for bringing back my depression"], [['-2e'],['-2e'],['+5e'],['-20e']], ['a9','a9', 'a9', 'a9'], 'in_class.png']
 
 a9 = ["a9", ["You instantly regret going to class since you would have made a 0 anyway. After the quiz is done and all taken up, the teacher shows a small \
 bit of mercy and releases class early. You think about how much more fun you could have had hanging out with friends. Whatever, you are a good student \
